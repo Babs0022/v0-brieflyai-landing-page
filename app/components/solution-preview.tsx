@@ -33,8 +33,11 @@ export function SolutionPreview() {
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
             The AI copilot that actually <span className="text-cyan-400">gets it</span>
           </h2>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+          <p className="text-xl text-slate-300 max-w-2xl mx-auto mb-2">
             Three powerful features that transform how you build and create
+          </p>
+          <p className="text-lg text-slate-400 max-w-2xl mx-auto">
+            Trusted by leading startups and agencies worldwide.
           </p>
         </motion.div>
 

@@ -6,8 +6,6 @@ import { Header } from "./components/header"
 import { HeroSection } from "./components/hero-section"
 import { ProblemStatement } from "./components/problem-statement"
 import { SolutionPreview } from "./components/solution-preview"
-import { DemoVideo } from "./components/demo-video"
-import { SocialProof } from "./components/social-proof"
 import { FeatureDeepDive } from "./components/feature-deep-dive"
 import { ComparisonTable } from "./components/comparison-table"
 import { UseCases } from "./components/use-cases"
@@ -27,8 +25,6 @@ export default function LandingPage() {
       <HeroSection y={y} />
       <ProblemStatement />
       <SolutionPreview />
-      <DemoVideo />
-      <SocialProof />
       <FeatureDeepDive />
       <ComparisonTable />
       <UseCases />

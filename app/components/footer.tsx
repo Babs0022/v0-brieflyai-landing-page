@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Github, Twitter, Linkedin, Mail, X } from "lucide-react"
+import { Twitter, Mail, X } from "lucide-react"
 
 export function Footer() {
   const [showPrivacy, setShowPrivacy] = useState(false)
@@ -32,8 +32,6 @@ export function Footer() {
                 >
                   <Twitter className="w-5 h-5" />
                 </a>
-                <Github className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer transition-colors" />
-                <Linkedin className="w-5 h-5 text-slate-400 hover:text-white cursor-pointer transition-colors" />
               </div>
             </div>
 
@@ -43,19 +41,11 @@ export function Footer() {
                 <a href="#features" className="block hover:text-white transition-colors">
                   Features
                 </a>
+                <a href="#solutions" className="block hover:text-white transition-colors">
+                  Solutions
+                </a>
                 <a href="#pricing" className="block hover:text-white transition-colors">
                   Pricing
-                </a>
-                <a href="#demo" className="block hover:text-white transition-colors">
-                  Demo
-                </a>
-                <a
-                  href="https://dash.brieflyai.xyz"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block hover:text-white transition-colors"
-                >
-                  Dashboard
                 </a>
               </div>
             </div>
@@ -63,12 +53,7 @@ export function Footer() {
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <div className="space-y-2 text-slate-400">
-                <a href="#" className="block hover:text-white transition-colors">
-                  About
-                </a>
-                <a href="#" className="block hover:text-white transition-colors">
-                  Blog
-                </a>
+                {/* Removed About link */}
                 <a href="mailto:Elijah@brieflyai.xyz" className="block hover:text-white transition-colors">
                   Contact
                 </a>
@@ -90,15 +75,12 @@ export function Footer() {
                 >
                   Terms of Service
                 </button>
-                <a href="#" className="block hover:text-white transition-colors">
-                  Status
-                </a>
               </div>
             </div>
           </div>
 
           <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
-            <p>&copy; 2024 BrieflyAI. All rights reserved.</p>
+            <p>&copy; 2025 BrieflyAI. All rights reserved.</p>
             <p className="mt-2 text-sm">
               Questions? Contact us at{" "}
               <a href="mailto:Elijah@brieflyai.xyz" className="text-cyan-400 hover:text-cyan-300">

@@ -28,21 +28,23 @@ export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
           <a href="#features" className="hover:text-cyan-400 transition-colors">
             Features
           </a>
+          <a href="#solutions" className="hover:text-cyan-400 transition-colors">
+            Solutions
+          </a>
           <a href="#pricing" className="hover:text-cyan-400 transition-colors">
             Pricing
           </a>
-          <a href="#demo" className="hover:text-cyan-400 transition-colors">
-            Demo
-          </a>
-          <a href="#login" className="hover:text-cyan-400 transition-colors">
-            Login
-          </a>
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden md:flex items-center space-x-4">
+          <Button asChild variant="ghost" className="text-slate-300 hover:bg-slate-800">
+            <a href="https://dash.brieflyai.xyz/login" target="_blank" rel="noopener noreferrer">
+              Login
+            </a>
+          </Button>
           <Button asChild className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600">
-            <a href="https://dash.brieflyai.xyz" target="_blank" rel="noopener noreferrer">
-              Start Free Trial
+            <a href="https://dash.brieflyai.xyz/signup" target="_blank" rel="noopener noreferrer">
+              Sign Up
             </a>
           </Button>
         </div>
@@ -62,21 +64,23 @@ export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
             <a href="#features" className="block hover:text-cyan-400 transition-colors">
               Features
             </a>
+            <a href="#solutions" className="block hover:text-cyan-400 transition-colors">
+              Solutions
+            </a>
             <a href="#pricing" className="block hover:text-cyan-400 transition-colors">
               Pricing
             </a>
-            <a href="#demo" className="block hover:text-cyan-400 transition-colors">
-              Demo
-            </a>
-            <a href="#login" className="block hover:text-cyan-400 transition-colors">
-              Login
-            </a>
+            <Button asChild variant="ghost" className="w-full text-slate-300 hover:bg-slate-800">
+              <a href="https://dash.brieflyai.xyz/login" target="_blank" rel="noopener noreferrer">
+                Login
+              </a>
+            </Button>
             <Button
               asChild
               className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600"
             >
-              <a href="https://dash.brieflyai.xyz" target="_blank" rel="noopener noreferrer">
-                Start Free Trial
+              <a href="https://dash.brieflyai.xyz/signup" target="_blank" rel="noopener noreferrer">
+                Sign Up
               </a>
             </Button>
           </div>

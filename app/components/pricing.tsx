@@ -26,11 +26,9 @@ export function Pricing() {
               </div>
               <div className="mb-6">
                 <div className="text-4xl font-bold mb-2">
-                  <span className="text-slate-400 line-through text-2xl">$47</span>
-                  <span className="text-cyan-400"> $17</span>
+                  <span className="text-cyan-400"> $0</span>
                   <span className="text-lg text-slate-400">/month</span>
                 </div>
-                <p className="text-slate-300">Lock in this price forever</p>
               </div>
 
               <div className="space-y-4 mb-8 text-left">
@@ -53,12 +51,10 @@ export function Pricing() {
                 className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-lg py-4"
               >
                 <a href="https://dash.brieflyai.xyz" target="_blank" rel="noopener noreferrer">
-                  Start Free Trial
+                  Get Started Free
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </a>
               </Button>
-
-              <p className="text-sm text-slate-400 mt-4">7-day free trial • No credit card required</p>
             </CardContent>
           </Card>
         </motion.div>

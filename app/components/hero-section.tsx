@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, Play } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface HeroSectionProps {
@@ -28,10 +28,11 @@ export function HeroSection({ y }: HeroSectionProps) {
             in Under 2 Minutes
           </h1>
 
-          <p className="text-xl md:text-2xl text-slate-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl text-slate-300 mb-4 max-w-3xl mx-auto leading-relaxed">
             The AI copilot that turns plain English into production-ready code and professional content.
             <span className="text-cyan-400"> No coding required.</span>
           </p>
+          <p className="text-lg text-slate-400 mb-8">Trusted by leading startups and agencies worldwide.</p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
             <Button
@@ -43,14 +44,6 @@ export function HeroSection({ y }: HeroSectionProps) {
                 Start Building Now
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-slate-600 text-slate-300 hover:bg-slate-800 text-lg px-8 py-4 bg-transparent"
-            >
-              <Play className="mr-2 w-5 h-5" />
-              Watch Demo
             </Button>
           </div>
         </motion.div>

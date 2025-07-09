@@ -37,7 +37,7 @@ export function UseCases() {
   ]
 
   return (
-    <section className="py-20 bg-slate-800/30">
+    <section id="solutions" className="py-20 bg-slate-800/30">
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Perfect for every creator</h2>

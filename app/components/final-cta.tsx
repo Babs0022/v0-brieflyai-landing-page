@@ -25,11 +25,10 @@ export function FinalCTA() {
               className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-xl px-12 py-6"
             >
               <a href="https://dash.brieflyai.xyz" target="_blank" rel="noopener noreferrer">
-                Start Free Trial
+                Get Started Free
                 <ArrowRight className="ml-2 w-6 h-6" />
               </a>
             </Button>
-            <p className="text-sm text-slate-400 mt-4">No credit card required • 7-day free trial</p>
           </div>
         </motion.div>
       </div>

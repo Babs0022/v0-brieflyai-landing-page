@@ -1,7 +1,8 @@
 "use client"
 
 import { useState } from "react"
-import { Twitter, Mail, X } from "lucide-react"
+import { Twitter, Mail } from "lucide-react"
+import Link from "next/link" // Import Link for client-side navigation
 
 export function Footer() {
   const [showPrivacy, setShowPrivacy] = useState(false)
@@ -63,18 +64,12 @@ export function Footer() {
             <div>
               <h4 className="font-semibold mb-4">Legal</h4>
               <div className="space-y-2 text-slate-400">
-                <button
-                  onClick={() => setShowPrivacy(true)}
-                  className="block hover:text-white transition-colors text-left"
-                >
+                <Link href="/privacy" className="block hover:text-white transition-colors">
                   Privacy Policy
-                </button>
-                <button
-                  onClick={() => setShowTerms(true)}
-                  className="block hover:text-white transition-colors text-left"
-                >
+                </Link>
+                <Link href="/terms" className="block hover:text-white transition-colors">
                   Terms of Service
-                </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -98,7 +93,7 @@ export function Footer() {
             <div className="sticky top-0 bg-slate-900 border-b border-slate-700 p-6 flex justify-between items-center">
               <h2 className="text-2xl font-bold">Privacy Policy</h2>
               <button onClick={() => setShowPrivacy(false)} className="text-slate-400 hover:text-white">
-                <X className="w-6 h-6" />
+                {/* Removed X icon */}
               </button>
             </div>
             <div className="p-6 prose prose-invert max-w-none">
@@ -212,7 +207,7 @@ export function Footer() {
             <div className="sticky top-0 bg-slate-900 border-b border-slate-700 p-6 flex justify-between items-center">
               <h2 className="text-2xl font-bold">Terms of Service</h2>
               <button onClick={() => setShowTerms(false)} className="text-slate-400 hover:text-white">
-                <X className="w-6 h-6" />
+                {/* Removed X icon */}
               </button>
             </div>
             <div className="p-6 prose prose-invert max-w-none">

@@ -16,7 +16,7 @@ export function Footer() {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <img src="/logo.png" alt="BrieflyAI Logo" className="w-8 h-8 object-contain" />
-                <span className="text-xl font-bold">
+                <span className="text-xl font-medium">
                   Briefly<span className="text-green-400">AI</span>
                 </span>
               </div>
@@ -40,7 +40,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">Product</h4>
+              <h4 className="font-normal mb-4">Product</h4>
               <div className="space-y-2 text-muted-foreground">
                 <a href="#features" className="block hover:text-green-400 transition-colors">
                   Features
@@ -55,7 +55,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">Company</h4>
+              <h4 className="font-normal mb-4">Company</h4>
               <div className="space-y-2 text-muted-foreground">
                 <a href="mailto:Elijah@brieflyai.xyz" className="block hover:text-green-400 transition-colors">
                   Contact
@@ -64,7 +64,7 @@ export function Footer() {
             </div>
 
             <div>
-              <h4 className="font-semibold mb-4">Legal</h4>
+              <h4 className="font-normal mb-4">Legal</h4>
               <div className="space-y-2 text-muted-foreground">
                 <Link href="/privacy" className="block hover:text-green-400 transition-colors">
                   Privacy Policy

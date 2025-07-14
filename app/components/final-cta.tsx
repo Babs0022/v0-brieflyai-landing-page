@@ -10,7 +10,7 @@ export function FinalCTA() {
       <div className="container mx-auto px-4 text-center">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto">
           <div className="bg-gradient-to-br from-secondary to-background rounded-3xl border border-border p-12 shadow-2xl">
-            <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            <h2 className="text-3xl md:text-5xl font-medium mb-6">
               Join 50+ creators building faster with{" "}
               <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
                 BrieflyAI

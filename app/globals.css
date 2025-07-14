@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --background: 220 10% 3.9%;
-    --foreground: 180 10% 95%;
+    --background: 220 10% 3.9%; /* Dark */
+    --foreground: 180 10% 95%; /* Light */
     --card: 220 10% 3.9%;
     --card-foreground: 180 10% 95%;
     --popover: 220 10% 3.9%;
@@ -24,6 +24,29 @@
     --input: 220 10% 20%;
     --ring: 142 76% 36%; /* Green */
     --radius: 0.5rem;
+  }
+
+  /* Light mode variables */
+  :root[data-theme="light"] {
+    --background: 0 0% 100%; /* White */
+    --foreground: 222.2 84% 4.9%; /* Dark text */
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 142 76% 36%; /* Green */
+    --primary-foreground: 0 0% 100%; /* White text on green */
+    --secondary: 210 40% 96.1%; /* Light gray */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* Darker gray */
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 142 76% 36%; /* Green */
+    --accent-foreground: 222.2 84% 4.9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 0 0% 100%;
+    --ring: 142 76% 36%; /* Green */
   }
 }
 
@@ -46,7 +69,7 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0f172a; /* Darker slate for track */
+  background: var(--background); /* Use variable for track */
 }
 
 ::-webkit-scrollbar-thumb {

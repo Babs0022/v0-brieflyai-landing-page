@@ -23,7 +23,7 @@ export function ComparisonTable() {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose BrieflyAI?</h2>
+          <h2 className="text-3xl md:text-4xl font-medium mb-4">Why Choose BrieflyAI?</h2>
           <p className="text-xl text-muted-foreground">See how we compare to other solutions</p>
         </motion.div>
 
@@ -32,11 +32,11 @@ export function ComparisonTable() {
             <table className="w-full">
               <thead>
                 <tr className="border-b border-border">
-                  <th className="text-left py-4 px-4">Tool</th>
-                  <th className="text-center py-4 px-4">Speed</th>
-                  <th className="text-center py-4 px-4">Ease of Use</th>
-                  <th className="text-center py-4 px-4">Integration</th>
-                  <th className="text-center py-4 px-4">Output Quality</th>
+                  <th className="text-left py-4 px-4 font-normal">Tool</th>
+                  <th className="text-center py-4 px-4 font-normal">Speed</th>
+                  <th className="text-center py-4 px-4 font-normal">Ease of Use</th>
+                  <th className="text-center py-4 px-4 font-normal">Integration</th>
+                  <th className="text-center py-4 px-4 font-normal">Output Quality</th>
                 </tr>
               </thead>
               <tbody>
@@ -45,7 +45,7 @@ export function ComparisonTable() {
                     key={index}
                     className={`border-b border-border ${competitor.name === "BrieflyAI" ? "bg-green-500/10" : ""}`}
                   >
-                    <td className="py-4 px-4 font-semibold">
+                    <td className="py-4 px-4 font-normal">
                       {competitor.name === "BrieflyAI" && <span className="text-green-400">👑 </span>}
                       {competitor.name}
                     </td>

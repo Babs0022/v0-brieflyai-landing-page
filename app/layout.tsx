@@ -1,16 +1,20 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Roboto } from "next/font/google"
 import "./globals.css"
+import { ThemeProvider } from "@/components/theme-provider" // Import ThemeProvider
 
-const inter = Inter({ subsets: ["latin"] })
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+})
 
 export const metadata: Metadata = {
   title: "BrieflyAI - Build React Components & Create Content in Under 2 Minutes",
   description:
     "The AI copilot that turns plain English into production-ready code and professional content. No coding required.",
   icons: {
-    icon: "/logo.png", // Set the favicon to the logo in the public directory
+    icon: "/logo.png",
   },
     generator: 'v0.dev'
 }
@@ -21,8 +25,17 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" suppressHydrationWarning>
+      <body>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark" // Set default theme to dark
+          enableSystem
+          disableTransitionOnChange
+        >
+          <div className={roboto.className}>{children}</div>
+        </ThemeProvider>
+      </body>
     </html>
   )
 }

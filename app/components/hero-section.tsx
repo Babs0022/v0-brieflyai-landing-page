@@ -19,7 +19,7 @@ export function HeroSection({ y }: HeroSectionProps) {
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium mb-6 leading-tight">
             Build React Components &<br />
             <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
               Create Content

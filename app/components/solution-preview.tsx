@@ -30,7 +30,7 @@ export function SolutionPreview() {
     <section id="features" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl md:text-5xl font-medium mb-4">
             The AI copilot that actually <span className="text-green-400">gets it</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-2">
@@ -58,7 +58,7 @@ export function SolutionPreview() {
                   >
                     <feature.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
+                  <h3 className="text-2xl font-medium mb-4">{feature.title}</h3>
                   <p className="text-muted-foreground text-lg leading-relaxed">{feature.description}</p>
                 </CardContent>
               </Card>

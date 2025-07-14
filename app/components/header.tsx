@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+import { ThemeToggle } from "@/components/theme-toggle" // Import ThemeToggle
 
 interface HeaderProps {
   isMenuOpen: boolean
@@ -20,7 +21,7 @@ export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-3 cursor-pointer">
           <img src="/logo.png" alt="BrieflyAI Logo" className="w-8 h-8 object-contain" />
-          <span className="text-xl font-bold">
+          <span className="text-xl font-medium">
             Briefly<span className="text-green-400">AI</span>
           </span>
         </Link>
@@ -51,6 +52,7 @@ export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
               Sign Up
             </a>
           </Button>
+          <ThemeToggle /> {/* Add ThemeToggle here */}
         </div>
 
         <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -87,6 +89,7 @@ export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
                 Sign Up
               </a>
             </Button>
+            <ThemeToggle /> {/* Add ThemeToggle here for mobile menu too */}
           </div>
         </motion.div>
       )}

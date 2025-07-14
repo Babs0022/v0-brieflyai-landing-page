@@ -40,7 +40,7 @@ export function UseCases() {
     <section id="solutions" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Perfect for every creator</h2>
+          <h2 className="text-3xl md:text-4xl font-medium mb-4">Perfect for every creator</h2>
           <p className="text-xl text-muted-foreground">See how BrieflyAI transforms workflows across different roles</p>
         </motion.div>
 
@@ -60,7 +60,7 @@ export function UseCases() {
                   >
                     <useCase.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">{useCase.title}</h3>
+                  <h3 className="text-2xl font-medium mb-2">{useCase.title}</h3>
                   <p className="text-green-400 mb-4">{useCase.subtitle}</p>
                   <p className="text-muted-foreground leading-relaxed">{useCase.description}</p>
                 </CardContent>

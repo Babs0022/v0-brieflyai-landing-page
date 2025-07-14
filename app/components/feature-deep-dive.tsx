@@ -35,7 +35,7 @@ export function FeatureDeepDive() {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything you need to build faster</h2>
+          <h2 className="text-3xl md:text-4xl font-medium mb-4">Everything you need to build faster</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Three powerful features working together to transform your workflow
           </p>
@@ -55,7 +55,7 @@ export function FeatureDeepDive() {
                 >
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-3xl font-bold mb-2">{feature.title}</h3>
+                <h3 className="text-3xl font-medium mb-2">{feature.title}</h3>
                 <p className="text-green-400 mb-4">{feature.subtitle}</p>
                 <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>

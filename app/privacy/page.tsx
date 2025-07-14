@@ -13,18 +13,18 @@ export default function PrivacyPage() {
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <main className="container mx-auto px-4 py-20 pt-32">
         <div className="bg-background rounded-lg max-w-4xl mx-auto border border-border p-6 md:p-8 lg:p-10">
-          <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">Privacy Policy</h1>
+          <h1 className="text-3xl md:text-4xl font-medium mb-6 text-center">Privacy Policy</h1>
           <div className="prose prose-invert max-w-none">
             <p className="text-muted-foreground mb-4">Last Updated: June 12, 2025</p>
 
-            <h3 className="text-xl font-semibold mb-3">1. Introduction</h3>
+            <h3 className="text-xl font-medium mb-3">1. Introduction</h3>
             <p className="mb-4">
               BrieflyAI ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how
               we collect, use, disclose, and safeguard your information when you use our Service. By using the Service,
               you consent to the data practices described in this policy.
             </p>
 
-            <h3 className="text-xl font-semibold mb-3">2. Information We Collect</h3>
+            <h3 className="text-xl font-medium mb-3">2. Information We Collect</h3>
             <p className="mb-2">We may collect the following types of information:</p>
             <ul className="list-disc pl-6 mb-4 space-y-1">
               <li>
@@ -52,7 +52,7 @@ export default function PrivacyPage() {
               </li>
             </ul>
 
-            <h3 className="text-xl font-semibold mb-3">3. How We Use Your Information</h3>
+            <h3 className="text-xl font-medium mb-3">3. How We Use Your Information</h3>
             <p className="mb-2">We use the information we collect to:</p>
             <ul className="list-disc pl-6 mb-4 space-y-1">
               <li>Provide, operate, maintain, and improve the Service.</li>
@@ -66,7 +66,7 @@ export default function PrivacyPage() {
               </li>
             </ul>
 
-            <h3 className="text-xl font-semibold mb-3">4. How We Share and Disclose Information</h3>
+            <h3 className="text-xl font-medium mb-3">4. How We Share and Disclose Information</h3>
             <p className="mb-2">
               We do not sell your personal information. We may share your information in the following circumstances:
             </p>
@@ -86,14 +86,14 @@ export default function PrivacyPage() {
               </li>
             </ul>
 
-            <h3 className="text-xl font-semibold mb-3">5. Data Security and Retention</h3>
+            <h3 className="text-xl font-medium mb-3">5. Data Security and Retention</h3>
             <p className="mb-4">
               We implement industry-standard security measures to protect your information from unauthorized access,
               alteration, disclosure, or destruction. However, no internet-based service is 100% secure. We retain your
               information for as long as your account is active or as needed to provide you with the Service.
             </p>
 
-            <h3 className="text-xl font-semibold mb-3">6. Your Data Protection Rights</h3>
+            <h3 className="text-xl font-medium mb-3">6. Your Data Protection Rights</h3>
             <p className="mb-2">
               Depending on your location, you may have the following rights regarding your personal information:
             </p>
@@ -106,7 +106,7 @@ export default function PrivacyPage() {
               <li>The right to withdraw consent.</li>
             </ul>
 
-            <h3 className="text-xl font-semibold mb-3">7. Contact Us</h3>
+            <h3 className="text-xl font-medium mb-3">7. Contact Us</h3>
             <p>
               If you have any questions about this Privacy Policy, please contact us at{" "}
               <a href="mailto:Elijah@brieflyai.xyz" className="text-green-400 hover:text-green-300">

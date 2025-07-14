@@ -28,7 +28,7 @@ export function ProblemStatement() {
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          className="text-3xl md:text-4xl font-bold mb-4"
+          className="text-3xl md:text-4xl font-medium mb-4"
         >
           Stop spending hours on tasks that should take minutes
         </motion.h2>
@@ -45,7 +45,7 @@ export function ProblemStatement() {
               <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <problem.icon className="w-8 h-8 text-green-400" />
               </div>
-              <h3 className="text-xl font-semibold mb-2">{problem.title}</h3>
+              <h3 className="text-xl font-normal mb-2">{problem.title}</h3>
               <p className="text-muted-foreground">{problem.description}</p>
             </motion.div>
           ))}

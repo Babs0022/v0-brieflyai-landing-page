@@ -36,7 +36,7 @@ export function FAQ() {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+          <h2 className="text-3xl md:text-4xl font-medium mb-4">Frequently Asked Questions</h2>
           <p className="text-xl text-muted-foreground">Everything you need to know about BrieflyAI</p>
         </motion.div>
 

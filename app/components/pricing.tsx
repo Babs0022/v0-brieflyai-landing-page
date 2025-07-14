@@ -10,7 +10,7 @@ export function Pricing() {
     <section id="pricing" className="py-20 bg-background">
       <div className="container mx-auto px-4 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Early Access Pricing</h2>
+          <h2 className="text-3xl md:text-4xl font-medium mb-4">Early Access Pricing</h2>
           <p className="text-xl text-muted-foreground">Lock in special pricing as an early adopter</p>
         </motion.div>
 
@@ -21,11 +21,11 @@ export function Pricing() {
         >
           <Card className="bg-gradient-to-br from-secondary to-background border-green-500/50 border-2 shadow-2xl">
             <CardContent className="p-8">
-              <div className="bg-gradient-to-r from-green-500 to-green-700 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 inline-block">
+              <div className="bg-gradient-to-r from-green-500 to-green-700 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 inline-block">
                 Early Access Special
               </div>
               <div className="mb-6">
-                <div className="text-4xl font-bold mb-2">
+                <div className="text-4xl font-medium mb-2">
                   <span className="text-green-400"> $0</span>
                   <span className="text-lg text-muted-foreground">/month</span>
                 </div>

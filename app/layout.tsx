@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: "BrieflyAI - Build React Components & Create Content in Under 2 Minutes",
   description:
     "The AI copilot that turns plain English into production-ready code and professional content. No coding required.",
+  icons: {
+    icon: "/logo.png", // Set the favicon to the logo in the public directory
+  },
     generator: 'v0.dev'
 }
 

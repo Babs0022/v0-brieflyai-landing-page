@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import Link from "next/link" // Import Link component
+import Link from "next/link"
 
 interface HeaderProps {
   isMenuOpen: boolean
@@ -19,8 +19,6 @@ export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-3 cursor-pointer">
-          {" "}
-          {/* Wrap logo and text with Link */}
           <img src="/logo.png" alt="BrieflyAI Logo" className="w-8 h-8 object-contain" />
           <span className="text-xl font-bold">
             Briefly<span className="text-green-400">AI</span>

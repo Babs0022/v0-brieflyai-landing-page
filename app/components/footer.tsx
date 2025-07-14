@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { Twitter, Mail } from "lucide-react"
-import Link from "next/link" // Import Link for client-side navigation
+import Link from "next/link"
 
 export function Footer() {
   const [showPrivacy, setShowPrivacy] = useState(false)
@@ -57,7 +57,6 @@ export function Footer() {
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
               <div className="space-y-2 text-muted-foreground">
-                {/* Removed About link */}
                 <a href="mailto:Elijah@brieflyai.xyz" className="block hover:text-green-400 transition-colors">
                   Contact
                 </a>

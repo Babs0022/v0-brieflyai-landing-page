@@ -20,7 +20,7 @@ export default function LandingPage() {
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"])
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <HeroSection y={y} />
       <ProblemStatement />

@@ -11,7 +11,7 @@ export function FeatureDeepDive() {
       description:
         "Transform natural language into production-ready React components. Every component is responsive, accessible, and follows best practices.",
       icon: Code,
-      color: "from-cyan-500 to-blue-500",
+      color: "from-green-500 to-green-700",
     },
     {
       title: "Content Creation",
@@ -19,7 +19,7 @@ export function FeatureDeepDive() {
       description:
         "Step-by-step content creation that maintains your brand voice and optimizes for search engines automatically.",
       icon: Wand2,
-      color: "from-blue-500 to-purple-500",
+      color: "from-green-600 to-green-800",
     },
     {
       title: "Smart Workflow",
@@ -27,16 +27,16 @@ export function FeatureDeepDive() {
       description:
         "Intelligent routing that suggests the perfect tool for your task and maintains context across your entire project.",
       icon: Route,
-      color: "from-purple-500 to-pink-500",
+      color: "from-green-700 to-green-900",
     },
   ]
 
   return (
-    <section className="py-20 bg-slate-800/30">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Everything you need to build faster</h2>
-          <p className="text-xl text-slate-300 max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Three powerful features working together to transform your workflow
           </p>
         </motion.div>
@@ -56,16 +56,16 @@ export function FeatureDeepDive() {
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-3xl font-bold mb-2">{feature.title}</h3>
-                <p className="text-xl text-cyan-400 mb-4">{feature.subtitle}</p>
-                <p className="text-lg text-slate-300 leading-relaxed">{feature.description}</p>
+                <p className="text-green-400 mb-4">{feature.subtitle}</p>
+                <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
               <div className="flex-1">
-                <div className="bg-slate-900/50 backdrop-blur-sm rounded-2xl border border-slate-700 p-8 shadow-2xl">
-                  <div className="bg-slate-800 rounded-lg p-4 font-mono text-sm">
-                    <div className="text-cyan-400 mb-2">
+                <div className="bg-secondary/50 backdrop-blur-sm rounded-2xl border border-border p-8 shadow-2xl">
+                  <div className="bg-background rounded-lg p-4 font-mono text-sm">
+                    <div className="text-green-400 mb-2">
                       {">"} {feature.title.toLowerCase()} example
                     </div>
-                    <div className="text-slate-400">✨ Processing...</div>
+                    <div className="text-muted-foreground">✨ Processing...</div>
                     <div className="text-green-400">✅ Ready in seconds</div>
                   </div>
                 </div>

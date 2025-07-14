@@ -33,11 +33,11 @@ export function FAQ() {
   ]
 
   return (
-    <section className="py-20 bg-slate-800/30">
+    <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-          <p className="text-xl text-slate-300">Everything you need to know about BrieflyAI</p>
+          <p className="text-xl text-muted-foreground">Everything you need to know about BrieflyAI</p>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="max-w-3xl mx-auto">
@@ -46,12 +46,12 @@ export function FAQ() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-lg px-6"
+                className="bg-secondary/50 backdrop-blur-sm border border-border rounded-lg px-6"
               >
-                <AccordionTrigger className="text-left hover:text-cyan-400 transition-colors">
+                <AccordionTrigger className="text-left hover:text-green-400 transition-colors">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-slate-300 leading-relaxed">{faq.answer}</AccordionContent>
+                <AccordionContent className="text-muted-foreground leading-relaxed">{faq.answer}</AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

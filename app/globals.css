@@ -4,25 +4,25 @@
 
 @layer base {
   :root {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 200 98% 39%;
-    --primary-foreground: 222.2 84% 4.9%;
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --background: 220 10% 3.9%;
+    --foreground: 180 10% 95%;
+    --card: 220 10% 3.9%;
+    --card-foreground: 180 10% 95%;
+    --popover: 220 10% 3.9%;
+    --popover-foreground: 180 10% 95%;
+    --primary: 142 76% 36%; /* Green */
+    --primary-foreground: 220 10% 3.9%; /* Dark text on green */
+    --secondary: 220 10% 15%;
+    --secondary-foreground: 180 10% 70%;
+    --muted: 220 10% 15%;
+    --muted-foreground: 180 10% 70%;
+    --accent: 142 76% 36%; /* Green */
+    --accent-foreground: 220 10% 3.9%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 200 98% 39%;
+    --destructive-foreground: 180 10% 95%;
+    --border: 220 10% 25%;
+    --input: 220 10% 20%;
+    --ring: 142 76% 36%; /* Green */
     --radius: 0.5rem;
   }
 }
@@ -46,14 +46,14 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-  background: #1e293b;
+  background: #0f172a; /* Darker slate for track */
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #475569;
+  background: #22c55e; /* Green for thumb */
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #64748b;
+  background: #16a34a; /* Darker green on hover */
 }

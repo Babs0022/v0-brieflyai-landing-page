@@ -10,26 +10,29 @@ export function Footer() {
 
   return (
     <>
-      <footer className="py-12 bg-slate-900 border-t border-slate-800">
+      <footer className="py-12 bg-background border-t border-border">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <img src="/logo.png" alt="BrieflyAI Logo" className="w-8 h-8 object-contain" />
                 <span className="text-xl font-bold">
-                  Briefly<span className="text-cyan-400">AI</span>
+                  Briefly<span className="text-green-400">AI</span>
                 </span>
               </div>
-              <p className="text-slate-400 mb-4">The AI copilot for creators and developers.</p>
+              <p className="text-muted-foreground mb-4">The AI copilot for creators and developers.</p>
               <div className="flex space-x-4">
-                <a href="mailto:Elijah@brieflyai.xyz" className="text-slate-400 hover:text-white transition-colors">
+                <a
+                  href="mailto:Elijah@brieflyai.xyz"
+                  className="text-muted-foreground hover:text-green-400 transition-colors"
+                >
                   <Mail className="w-5 h-5" />
                 </a>
                 <a
                   href="https://twitter.com/trybrieflyai"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-slate-400 hover:text-white transition-colors"
+                  className="text-muted-foreground hover:text-green-400 transition-colors"
                 >
                   <Twitter className="w-5 h-5" />
                 </a>
@@ -38,14 +41,14 @@ export function Footer() {
 
             <div>
               <h4 className="font-semibold mb-4">Product</h4>
-              <div className="space-y-2 text-slate-400">
-                <a href="#features" className="block hover:text-white transition-colors">
+              <div className="space-y-2 text-muted-foreground">
+                <a href="#features" className="block hover:text-green-400 transition-colors">
                   Features
                 </a>
-                <a href="#solutions" className="block hover:text-white transition-colors">
+                <a href="#solutions" className="block hover:text-green-400 transition-colors">
                   Solutions
                 </a>
-                <a href="#pricing" className="block hover:text-white transition-colors">
+                <a href="#pricing" className="block hover:text-green-400 transition-colors">
                   Pricing
                 </a>
               </div>
@@ -53,9 +56,9 @@ export function Footer() {
 
             <div>
               <h4 className="font-semibold mb-4">Company</h4>
-              <div className="space-y-2 text-slate-400">
+              <div className="space-y-2 text-muted-foreground">
                 {/* Removed About link */}
-                <a href="mailto:Elijah@brieflyai.xyz" className="block hover:text-white transition-colors">
+                <a href="mailto:Elijah@brieflyai.xyz" className="block hover:text-green-400 transition-colors">
                   Contact
                 </a>
               </div>
@@ -63,22 +66,22 @@ export function Footer() {
 
             <div>
               <h4 className="font-semibold mb-4">Legal</h4>
-              <div className="space-y-2 text-slate-400">
-                <Link href="/privacy" className="block hover:text-white transition-colors">
+              <div className="space-y-2 text-muted-foreground">
+                <Link href="/privacy" className="block hover:text-green-400 transition-colors">
                   Privacy Policy
                 </Link>
-                <Link href="/terms" className="block hover:text-white transition-colors">
+                <Link href="/terms" className="block hover:text-green-400 transition-colors">
                   Terms of Service
                 </Link>
               </div>
             </div>
           </div>
 
-          <div className="border-t border-slate-800 mt-8 pt-8 text-center text-slate-400">
+          <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
             <p>&copy; 2025 BrieflyAI. All rights reserved.</p>
             <p className="mt-2 text-sm">
               Questions? Contact us at{" "}
-              <a href="mailto:Elijah@brieflyai.xyz" className="text-cyan-400 hover:text-cyan-300">
+              <a href="mailto:Elijah@brieflyai.xyz" className="text-green-400 hover:text-green-300">
                 Elijah@brieflyai.xyz
               </a>
             </p>
@@ -89,15 +92,15 @@ export function Footer() {
       {/* Privacy Policy Modal */}
       {showPrivacy && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-slate-900 rounded-lg max-w-4xl max-h-[80vh] overflow-y-auto border border-slate-700">
-            <div className="sticky top-0 bg-slate-900 border-b border-slate-700 p-6 flex justify-between items-center">
+          <div className="bg-background rounded-lg max-w-4xl max-h-[80vh] overflow-y-auto border border-border">
+            <div className="sticky top-0 bg-background border-b border-border p-6 flex justify-between items-center">
               <h2 className="text-2xl font-bold">Privacy Policy</h2>
-              <button onClick={() => setShowPrivacy(false)} className="text-slate-400 hover:text-white">
+              <button onClick={() => setShowPrivacy(false)} className="text-muted-foreground hover:text-foreground">
                 {/* Removed X icon */}
               </button>
             </div>
             <div className="p-6 prose prose-invert max-w-none">
-              <p className="text-slate-400 mb-4">Last Updated: June 12, 2025</p>
+              <p className="text-muted-foreground mb-4">Last Updated: June 12, 2025</p>
 
               <h3 className="text-xl font-semibold mb-3">1. Introduction</h3>
               <p className="mb-4">
@@ -190,7 +193,7 @@ export function Footer() {
               <h3 className="text-xl font-semibold mb-3">7. Contact Us</h3>
               <p>
                 If you have any questions about this Privacy Policy, please contact us at{" "}
-                <a href="mailto:Elijah@brieflyai.xyz" className="text-cyan-400 hover:text-cyan-300">
+                <a href="mailto:Elijah@brieflyai.xyz" className="text-green-400 hover:text-green-300">
                   Elijah@brieflyai.xyz
                 </a>
                 .
@@ -203,15 +206,15 @@ export function Footer() {
       {/* Terms of Service Modal */}
       {showTerms && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-          <div className="bg-slate-900 rounded-lg max-w-4xl max-h-[80vh] overflow-y-auto border border-slate-700">
-            <div className="sticky top-0 bg-slate-900 border-b border-slate-700 p-6 flex justify-between items-center">
+          <div className="bg-background rounded-lg max-w-4xl max-h-[80vh] overflow-y-auto border border-border">
+            <div className="sticky top-0 bg-background border-b border-border p-6 flex justify-between items-center">
               <h2 className="text-2xl font-bold">Terms of Service</h2>
-              <button onClick={() => setShowTerms(false)} className="text-slate-400 hover:text-white">
+              <button onClick={() => setShowTerms(false)} className="text-muted-foreground hover:text-foreground">
                 {/* Removed X icon */}
               </button>
             </div>
             <div className="p-6 prose prose-invert max-w-none">
-              <p className="text-slate-400 mb-4">Last Updated: June 12, 2025</p>
+              <p className="text-muted-foreground mb-4">Last Updated: June 12, 2025</p>
 
               <p className="mb-4">
                 Welcome to BrieflyAI. These Terms of Service ("Terms") govern your access to and use of the BrieflyAI
@@ -290,7 +293,7 @@ export function Footer() {
               <h3 className="text-xl font-semibold mb-3">8. Contact Information</h3>
               <p>
                 If you have any questions about these Terms, please contact us at{" "}
-                <a href="mailto:Elijah@brieflyai.xyz" className="text-cyan-400 hover:text-cyan-300">
+                <a href="mailto:Elijah@brieflyai.xyz" className="text-green-400 hover:text-green-300">
                   Elijah@brieflyai.xyz
                 </a>
                 .

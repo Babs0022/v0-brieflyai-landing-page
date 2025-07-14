@@ -9,13 +9,13 @@ export default function TermsPage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <div className="min-h-screen bg-slate-900 text-white overflow-x-hidden">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Header isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
       <main className="container mx-auto px-4 py-20 pt-32">
-        <div className="bg-slate-900 rounded-lg max-w-4xl mx-auto border border-slate-700 p-6 md:p-8 lg:p-10">
+        <div className="bg-background rounded-lg max-w-4xl mx-auto border border-border p-6 md:p-8 lg:p-10">
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-center">Terms of Service</h1>
           <div className="prose prose-invert max-w-none">
-            <p className="text-slate-400 mb-4">Last Updated: June 12, 2025</p>
+            <p className="text-muted-foreground mb-4">Last Updated: June 12, 2025</p>
 
             <p className="mb-4">
               Welcome to BrieflyAI. These Terms of Service ("Terms") govern your access to and use of the BrieflyAI
@@ -92,7 +92,7 @@ export default function TermsPage() {
             <h3 className="text-xl font-semibold mb-3">8. Contact Information</h3>
             <p>
               If you have any questions about these Terms, please contact us at{" "}
-              <a href="mailto:Elijah@brieflyai.xyz" className="text-cyan-400 hover:text-cyan-300">
+              <a href="mailto:Elijah@brieflyai.xyz" className="text-green-400 hover:text-green-300">
                 Elijah@brieflyai.xyz
               </a>
               .

@@ -4,7 +4,8 @@ import { motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
-import { ThemeToggle } from "@/components/theme-toggle" // Import ThemeToggle
+import { ThemeToggle } from "@/components/theme-toggle"
+import { trackEvent, trackLogin, trackSignUp } from "@/components/analytics"
 
 interface HeaderProps {
   isMenuOpen: boolean
@@ -12,6 +13,40 @@ interface HeaderProps {
 }
 
 export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
+  const handleNavClick = (section: string) => {
+    trackEvent("navigation_click", {
+      event_category: "navigation",
+      event_label: section,
+      page_location: "header",
+    })
+  }
+
+  const handleLoginClick = () => {
+    trackEvent("login_attempt", {
+      event_category: "authentication",
+      event_label: "header_login_button",
+      page_location: "header",
+    })
+    trackLogin("email")
+  }
+
+  const handleSignUpClick = () => {
+    trackEvent("signup_attempt", {
+      event_category: "authentication",
+      event_label: "header_signup_button",
+      page_location: "header",
+    })
+    trackSignUp("email")
+  }
+
+  const handleLogoClick = () => {
+    trackEvent("logo_click", {
+      event_category: "navigation",
+      event_label: "header_logo",
+      page_location: "header",
+    })
+  }
+
   return (
     <motion.header
       initial={{ y: -100 }}
@@ -19,40 +54,90 @@ export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
       className="fixed top-0 w-full z-50 backdrop-blur-md bg-background/80 border-b border-border"
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center space-x-3 cursor-pointer">
+        <Link href="/" className="flex items-center space-x-3 cursor-pointer" onClick={handleLogoClick}>
           <img src="/logo.png" alt="BrieflyAI Logo" className="w-8 h-8 object-contain" />
-          <span className="text-xl font-medium">
+          <span className="text-xl font-semibold tracking-tight">
             Briefly<span className="text-green-400">AI</span>
           </span>
         </Link>
 
-        <nav className="hidden md:flex items-center space-x-8">
-          <a href="#features" className="hover:text-green-400 transition-colors">
-            Features
+        <nav className="hidden md:flex items-center space-x-6">
+          <a
+            href="#problem"
+            className="hover:text-green-400 transition-colors font-medium text-sm"
+            onClick={() => handleNavClick("problem")}
+          >
+            Problem
           </a>
-          <a href="#solutions" className="hover:text-green-400 transition-colors">
+          <a
+            href="#copilot"
+            className="hover:text-green-400 transition-colors font-medium text-sm"
+            onClick={() => handleNavClick("copilot")}
+          >
+            Copilot
+          </a>
+          <a
+            href="#tools"
+            className="hover:text-green-400 transition-colors font-medium text-sm"
+            onClick={() => handleNavClick("tools")}
+          >
+            Tools
+          </a>
+          <a
+            href="#comparison"
+            className="hover:text-green-400 transition-colors font-medium text-sm"
+            onClick={() => handleNavClick("comparison")}
+          >
+            Comparison
+          </a>
+          <a
+            href="#solutions"
+            className="hover:text-green-400 transition-colors font-medium text-sm"
+            onClick={() => handleNavClick("solutions")}
+          >
             Solutions
           </a>
-          <a href="#pricing" className="hover:text-green-400 transition-colors">
+          <Link
+            href="/pricing"
+            className="hover:text-green-400 transition-colors font-medium text-sm"
+            onClick={() => handleNavClick("pricing")}
+          >
             Pricing
+          </Link>
+          <a
+            href="#faq"
+            className="hover:text-green-400 transition-colors font-medium text-sm"
+            onClick={() => handleNavClick("faq")}
+          >
+            FAQ
           </a>
         </nav>
 
         <div className="hidden md:flex items-center space-x-4">
-          <Button asChild variant="ghost" className="text-foreground hover:bg-secondary">
-            <a href="https://dash.brieflyai.xyz/login" target="_blank" rel="noopener noreferrer">
+          <Button asChild variant="ghost" className="text-foreground hover:bg-secondary font-medium">
+            <a
+              href="https://dash.brieflyai.xyz/login"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleLoginClick}
+            >
               Login
             </a>
           </Button>
           <Button
             asChild
-            className="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800"
+            className="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 font-medium"
           >
-            <a href="https://dash.brieflyai.xyz/signup" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://dash.brieflyai.xyz/signup"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleSignUpClick}
+            >
               Sign Up
             </a>
           </Button>
-          <ThemeToggle /> {/* Add ThemeToggle here */}
+          <ThemeToggle />
         </div>
 
         <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -67,29 +152,79 @@ export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
           className="md:hidden bg-secondary border-t border-border"
         >
           <div className="container mx-auto px-4 py-4 space-y-4">
-            <a href="#features" className="block hover:text-green-400 transition-colors">
-              Features
+            <a
+              href="#problem"
+              className="block hover:text-green-400 transition-colors font-medium"
+              onClick={() => handleNavClick("problem")}
+            >
+              Problem
             </a>
-            <a href="#solutions" className="block hover:text-green-400 transition-colors">
+            <a
+              href="#copilot"
+              className="block hover:text-green-400 transition-colors font-medium"
+              onClick={() => handleNavClick("copilot")}
+            >
+              Copilot
+            </a>
+            <a
+              href="#tools"
+              className="block hover:text-green-400 transition-colors font-medium"
+              onClick={() => handleNavClick("tools")}
+            >
+              Tools
+            </a>
+            <a
+              href="#comparison"
+              className="block hover:text-green-400 transition-colors font-medium"
+              onClick={() => handleNavClick("comparison")}
+            >
+              Comparison
+            </a>
+            <a
+              href="#solutions"
+              className="block hover:text-green-400 transition-colors font-medium"
+              onClick={() => handleNavClick("solutions")}
+            >
               Solutions
             </a>
-            <a href="#pricing" className="block hover:text-green-400 transition-colors">
+            <Link
+              href="/pricing"
+              className="block hover:text-green-400 transition-colors font-medium"
+              onClick={() => handleNavClick("pricing")}
+            >
               Pricing
+            </Link>
+            <a
+              href="#faq"
+              className="block hover:text-green-400 transition-colors font-medium"
+              onClick={() => handleNavClick("faq")}
+            >
+              FAQ
             </a>
-            <Button asChild variant="ghost" className="w-full text-foreground hover:bg-secondary">
-              <a href="https://dash.brieflyai.xyz/login" target="_blank" rel="noopener noreferrer">
+            <Button asChild variant="ghost" className="w-full text-foreground hover:bg-secondary font-medium">
+              <a
+                href="https://dash.brieflyai.xyz/login"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleLoginClick}
+              >
                 Login
               </a>
             </Button>
             <Button
               asChild
-              className="w-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800"
+              className="w-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 font-medium"
             >
-              <a href="https://dash.brieflyai.xyz/signup" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://dash.brieflyai.xyz/signup"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleSignUpClick}
+              >
                 Sign Up
               </a>
             </Button>
-            <ThemeToggle /> {/* Add ThemeToggle here for mobile menu too */}
+            <ThemeToggle />
           </div>
         </motion.div>
       )}

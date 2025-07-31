@@ -6,38 +6,68 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export function FAQ() {
   const faqs = [
     {
-      question: "Do I need coding experience?",
+      question: "What is BrieflyAI and how does it work?",
       answer:
-        "Not at all! BrieflyAI is designed for creators of all skill levels. Simply describe what you want in plain English, and we'll generate the code for you.",
+        "BrieflyAI is an advanced AI copilot designed to be your strategic partner for brainstorming, coding, research, content creation, and strategic planning. It works by understanding your natural language prompts and leveraging specialized AI models to generate highly relevant, context-aware, and production-ready outputs, from React components to SEO-optimized articles.",
     },
     {
-      question: "What frameworks are supported?",
+      question: "What kind of code can BrieflyAI generate?",
       answer:
-        "We currently support React with Next.js, with plans to add Vue, Svelte, and Angular support in the coming months.",
+        "BrieflyAI specializes in generating production-ready React components from plain English descriptions. This includes UI elements, complex sections, and even full page layouts. We focus on clean, responsive, and accessible code following modern best practices. Support for other frameworks like Vue and Svelte is planned.",
     },
     {
-      question: "Can I use this for client work?",
+      question: "How does BrieflyAI help with content creation?",
       answer:
-        "Yes! All plans include a commercial license, so you can use BrieflyAI-generated components and content for client projects without any restrictions.",
+        "Our Guided Content Creation tool provides a step-by-step wizard to help you produce high-quality, SEO-optimized content. It ensures brand consistency, adapts to your desired tone, and can generate blog posts, emails, social media updates, and more, saving you significant time and effort.",
     },
     {
-      question: "How is this different from ChatGPT?",
+      question: "What are the 'specialized tools' and how do they differ from the main Copilot?",
       answer:
-        "BrieflyAI is specifically trained for component generation and content creation. We provide guided workflows, context preservation, and production-ready outputs that ChatGPT can't match.",
+        "Beyond the core AI Copilot, BrieflyAI offers four specialized tools: Briefly for Creators (content & community), Briefly for Prompters (AI prompt engineering), Briefly for Artists (creative & visual design), and Briefly for Analysts (data & strategic analysis). While the Copilot provides overarching strategic guidance, these tools offer deep, tailored functionalities for specific creative and technical workflows, all integrated into one platform.",
     },
     {
-      question: "What if I'm not satisfied?",
+      question: "Is BrieflyAI suitable for beginners or experienced professionals?",
       answer:
-        "We offer a 30-day money-back guarantee. If you're not completely satisfied with BrieflyAI, we'll refund your payment, no questions asked.",
+        "BrieflyAI is designed for everyone! Beginners can easily generate complex outputs without prior coding or design experience, thanks to our intuitive interface and guided workflows. Experienced professionals will find it an invaluable accelerator, helping them brainstorm, prototype, and produce high-quality work much faster, focusing on strategy rather than repetitive tasks.",
+    },
+    {
+      question: "How does BrieflyAI ensure the quality and relevance of its outputs?",
+      answer:
+        "BrieflyAI is built on advanced AI frameworks that prioritize contextual understanding and strategic thinking. Unlike generic AI, it's trained to grasp the nuances of your requests and project goals. We continuously refine our models based on user feedback and industry best practices to ensure outputs are not only high-quality but also highly relevant and actionable.",
+    },
+    {
+      question: "What is your data privacy policy?",
+      answer:
+        "We are committed to protecting your privacy. We collect only the necessary information to provide and improve our service. Your inputs and generated content are used to enhance our AI models, primarily in aggregated and anonymized forms where possible. We do not sell your personal information. Please refer to our full Privacy Policy for more details.",
+    },
+    {
+      question: "What if the AI output isn't exactly what I expected?",
+      answer:
+        "While our AI strives for precision, sometimes outputs may require minor adjustments. You can refine your prompts, provide more specific instructions, or iterate on the generated content. Our tools are designed to be iterative, allowing you to guide the AI towards your desired outcome. We also welcome feedback to continuously improve our models.",
+    },
+    {
+      question: "Do I need coding experience to use the code generation features?",
+      answer:
+        "No, you do not! Our code generation feature is designed for users of all technical backgrounds. You simply describe the component you need in plain English, and BrieflyAI will generate the production-ready React code for you. You can then copy-paste it directly into your project.",
+    },
+    {
+      question: "How is BrieflyAI different from other AI assistants like ChatGPT or Claude?",
+      answer:
+        "BrieflyAI is purpose-built for strategic thinking and production-ready output, going beyond generic conversational AI. While tools like ChatGPT are excellent for broad queries, BrieflyAI offers deep contextual understanding, specialized tools for specific creative and technical workflows (e.g., code, content, prompts, data), and a focus on actionable, high-quality results that integrate seamlessly into your projects. Our AI is trained to be a partner in your workflow, not just a chatbot.",
+    },
+    {
+      question: "What are your future plans for BrieflyAI?",
+      answer:
+        "We are continuously evolving BrieflyAI! Our roadmap includes expanding support for more coding frameworks (Vue, Svelte, Angular), introducing new specialized tools, enhancing AI capabilities for even deeper strategic insights, and integrating with more third-party platforms to streamline your workflow further. Stay tuned for updates!",
     },
   ]
 
   return (
-    <section className="py-20 bg-background">
+    <section id="faq" className="py-20 bg-background" itemScope itemType="https://schema.org/FAQPage">
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-medium mb-4">Frequently Asked Questions</h2>
-          <p className="text-xl text-muted-foreground">Everything you need to know about BrieflyAI</p>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+          <p className="text-xl text-muted-foreground font-light">Everything you need to know about BrieflyAI</p>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="max-w-3xl mx-auto">
@@ -47,11 +77,22 @@ export function FAQ() {
                 key={index}
                 value={`item-${index}`}
                 className="bg-secondary/50 backdrop-blur-sm border border-border rounded-lg px-6"
+                itemScope
+                itemType="https://schema.org/Question"
               >
-                <AccordionTrigger className="text-left hover:text-green-400 transition-colors">
+                <AccordionTrigger
+                  className="text-left hover:text-green-400 transition-colors font-medium"
+                  itemProp="name"
+                >
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground leading-relaxed">{faq.answer}</AccordionContent>
+                <AccordionContent
+                  className="text-muted-foreground leading-relaxed font-light"
+                  itemScope
+                  itemType="https://schema.org/Answer"
+                >
+                  <div itemProp="text">{faq.answer}</div>
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>

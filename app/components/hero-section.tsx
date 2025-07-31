@@ -1,48 +1,75 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, Sparkles } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { trackEvent } from "@/components/analytics"
 
 interface HeroSectionProps {
   y: any
 }
 
 export function HeroSection({ y }: HeroSectionProps) {
+  const handleCTAClick = () => {
+    trackEvent("cta_click", {
+      event_category: "engagement",
+      event_label: "hero_start_building",
+      page_location: "hero_section",
+    })
+  }
+
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-br from-background via-secondary to-background" />
-      <motion.div style={{ y }} className="absolute inset-0 opacity-30">
+      <motion.div style={{ y }} className="absolute inset-0 opacity-30" aria-hidden="true">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/20 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-green-700/20 rounded-full blur-3xl" />
       </motion.div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium mb-6 leading-tight">
-            Build React Components &<br />
+          <div className="flex items-center justify-center mb-8">
+            <div className="bg-gradient-to-r from-green-500/20 to-green-700/20 backdrop-blur-sm border border-green-500/30 rounded-full px-6 py-3 flex items-center space-x-2">
+              <Sparkles className="w-5 h-5 text-green-400" />
+              <span className="text-green-400 font-medium text-sm">Powered by Advanced AI Frameworks</span>
+            </div>
+          </div>
+
+          <h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-8 leading-[0.9] tracking-tight">
             <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-              Create Content
+              An AI Assistant
             </span>
             <br />
-            in Under 2 Minutes
+            That Actually Gets It
           </h1>
 
-          <p className="text-2xl md:text-3xl text-muted-foreground mb-4 max-w-3xl mx-auto leading-relaxed">
-            The AI copilot that turns plain English into production-ready code and professional content.
-            <span className="text-green-400"> No coding required.</span>
+          <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-6 max-w-4xl mx-auto leading-relaxed font-light">
+            Your most resourceful partner for{" "}
+            <span className="text-green-400 font-medium">
+              brainstorming, coding, research, content creation, and strategic planning.
+            </span>
+            <br />
+            Built to understand what you need before you even ask.
           </p>
-          <p className="text-lg text-muted-foreground mb-8">Trusted by Amazing Creatives worldwide.</p>
+          <p className="text-base md:text-lg text-muted-foreground mb-10 font-light">
+            Democratizing the creation process for everyone, everywhere.
+          </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-lg px-8 py-4"
+              className="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-base md:text-lg px-8 py-4 h-14 font-medium"
             >
-              <a href="https://dash.brieflyai.xyz" target="_blank" rel="noopener noreferrer">
-                Start Building Now
-                <ArrowRight className="ml-2 w-5 h-5" />
+              <a
+                href="https://dash.brieflyai.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Experience BrieflyAI Copilot - Free trial"
+                onClick={handleCTAClick}
+              >
+                Experience the Copilot
+                <ArrowRight className="ml-2 w-5 h-5" aria-hidden="true" />
               </a>
             </Button>
           </div>
@@ -52,23 +79,33 @@ export function HeroSection({ y }: HeroSectionProps) {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.3 }}
-          className="relative max-w-4xl mx-auto"
+          className="relative max-w-5xl mx-auto"
         >
-          <div className="bg-secondary/50 backdrop-blur-sm rounded-2xl border border-border p-6 shadow-2xl">
-            <div className="bg-background rounded-lg p-4 font-mono text-sm">
-              <div className="flex items-center space-x-2 mb-4">
-                <div className="w-3 h-3 bg-red-500 rounded-full" />
-                <div className="w-3 h-3 bg-yellow-500 rounded-full" />
-                <div className="w-3 h-3 bg-green-500 rounded-full" />
-                <span className="text-muted-foreground ml-4">BrieflyAI Terminal</span>
+          <figure className="bg-secondary/50 backdrop-blur-sm rounded-2xl border border-border p-6 shadow-2xl">
+            <div className="bg-background rounded-lg p-6 font-mono text-sm">
+              <div className="flex items-center space-x-2 mb-4" aria-label="AI Copilot interface">
+                <div className="w-3 h-3 bg-red-500 rounded-full" aria-hidden="true" />
+                <div className="w-3 h-3 bg-yellow-500 rounded-full" aria-hidden="true" />
+                <div className="w-3 h-3 bg-green-500 rounded-full" aria-hidden="true" />
+                <span className="text-muted-foreground ml-4 font-medium">BrieflyAI Copilot</span>
               </div>
-              <div className="space-y-2">
-                <div className="text-green-400">{">"} build a pricing section with 3 tiers</div>
-                <div className="text-muted-foreground">✨ Generating React component...</div>
-                <div className="text-green-400">✅ Component ready in 1.8 seconds</div>
+              <div className="space-y-3">
+                <div className="text-blue-400 font-medium">
+                  👤 User: I need to launch a SaaS product but don't know where to start
+                </div>
+                <div className="text-green-400 font-medium">
+                  🤖 Briefly: I'll help you create a comprehensive launch strategy. Let me break this down:
+                </div>
+                <div className="text-muted-foreground ml-4">✨ Analyzing market positioning...</div>
+                <div className="text-muted-foreground ml-4">📊 Creating go-to-market framework...</div>
+                <div className="text-muted-foreground ml-4">🎯 Developing content strategy...</div>
+                <div className="text-green-400 font-medium">✅ Complete launch roadmap ready with actionable steps</div>
               </div>
             </div>
-          </div>
+            <figcaption className="sr-only">
+              Example of BrieflyAI Copilot providing strategic guidance for SaaS product launch
+            </figcaption>
+          </figure>
         </motion.div>
       </div>
     </section>

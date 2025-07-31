@@ -16,15 +16,16 @@ export function Footer() {
             <div>
               <div className="flex items-center space-x-3 mb-4">
                 <img src="/logo.png" alt="BrieflyAI Logo" className="w-8 h-8 object-contain" />
-                <span className="text-xl font-medium">
+                <span className="text-xl font-semibold tracking-tight">
                   Briefly<span className="text-green-400">AI</span>
                 </span>
               </div>
-              <p className="text-muted-foreground mb-4">The AI copilot for creators and developers.</p>
+              <p className="text-muted-foreground mb-4 font-light">The AI copilot for creators and developers.</p>
               <div className="flex space-x-4">
                 <a
                   href="mailto:Elijah@brieflyai.xyz"
                   className="text-muted-foreground hover:text-green-400 transition-colors"
+                  aria-label="Email BrieflyAI"
                 >
                   <Mail className="w-5 h-5" />
                 </a>
@@ -33,6 +34,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted-foreground hover:text-green-400 transition-colors"
+                  aria-label="BrieflyAI Twitter"
                 >
                   <Twitter className="w-5 h-5" />
                 </a>
@@ -40,36 +42,39 @@ export function Footer() {
             </div>
 
             <div>
-              <h4 className="font-normal mb-4">Product</h4>
+              <h4 className="font-semibold mb-4 tracking-tight">Product</h4>
               <div className="space-y-2 text-muted-foreground">
-                <a href="#features" className="block hover:text-green-400 transition-colors">
+                <a href="#features" className="block hover:text-green-400 transition-colors font-light">
                   Features
                 </a>
-                <a href="#solutions" className="block hover:text-green-400 transition-colors">
+                <a href="#solutions" className="block hover:text-green-400 transition-colors font-light">
                   Solutions
                 </a>
-                <a href="#pricing" className="block hover:text-green-400 transition-colors">
+                <Link href="/pricing" className="block hover:text-green-400 transition-colors font-light">
                   Pricing
-                </a>
+                </Link>
               </div>
             </div>
 
             <div>
-              <h4 className="font-normal mb-4">Company</h4>
+              <h4 className="font-semibold mb-4 tracking-tight">Company</h4>
               <div className="space-y-2 text-muted-foreground">
-                <a href="mailto:Elijah@brieflyai.xyz" className="block hover:text-green-400 transition-colors">
+                <a
+                  href="mailto:Elijah@brieflyai.xyz"
+                  className="block hover:text-green-400 transition-colors font-light"
+                >
                   Contact
                 </a>
               </div>
             </div>
 
             <div>
-              <h4 className="font-normal mb-4">Legal</h4>
+              <h4 className="font-semibold mb-4 tracking-tight">Legal</h4>
               <div className="space-y-2 text-muted-foreground">
-                <Link href="/privacy" className="block hover:text-green-400 transition-colors">
+                <Link href="/privacy" className="block hover:text-green-400 transition-colors font-light">
                   Privacy Policy
                 </Link>
-                <Link href="/terms" className="block hover:text-green-400 transition-colors">
+                <Link href="/terms" className="block hover:text-green-400 transition-colors font-light">
                   Terms of Service
                 </Link>
               </div>
@@ -77,8 +82,8 @@ export function Footer() {
           </div>
 
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2025 BrieflyAI. All rights reserved.</p>
-            <p className="mt-2 text-sm">
+            <p className="font-light">&copy; 2025 BrieflyAI. All rights reserved.</p>
+            <p className="mt-2 text-sm font-light">
               Questions? Contact us at{" "}
               <a href="mailto:Elijah@brieflyai.xyz" className="text-green-400 hover:text-green-300">
                 Elijah@brieflyai.xyz
@@ -88,7 +93,7 @@ export function Footer() {
         </div>
       </footer>
 
-      {/* Privacy Policy Modal */}
+      {/* Privacy Policy Modal - Removed as it's now a dedicated page */}
       {showPrivacy && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
           <div className="bg-background rounded-lg max-w-4xl max-h-[80vh] overflow-y-auto border border-border">
@@ -202,7 +207,7 @@ export function Footer() {
         </div>
       )}
 
-      {/* Terms of Service Modal */}
+      {/* Terms of Service Modal - Removed as it's now a dedicated page */}
       {showTerms && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
           <div className="bg-background rounded-lg max-w-4xl max-h-[80vh] overflow-y-auto border border-border">

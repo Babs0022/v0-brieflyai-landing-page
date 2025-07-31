@@ -24,6 +24,7 @@
     --input: 220 10% 20%;
     --ring: 142 76% 36%; /* Green */
     --radius: 0.5rem;
+    --font-inter: "Inter", sans-serif;
   }
 
   /* Light mode variables */
@@ -54,29 +55,120 @@
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+    /* Optimize text rendering */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-variant-ligatures: contextual;
+    line-height: 1.6;
+  }
+
+  /* Typography improvements */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
+  }
+
+  h2 {
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 600;
+    letter-spacing: -0.03em;
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    line-height: 1.7;
+    font-weight: 400;
+  }
+
+  /* Improve focus visibility for accessibility */
+  *:focus-visible {
+    outline: 2px solid hsl(var(--ring));
+    outline-offset: 2px;
   }
 }
 
 html {
   scroll-behavior: smooth;
+  /* Prevent layout shift */
+  scroll-padding-top: 80px;
 }
 
-/* Custom scrollbar */
+/* Optimize images for Core Web Vitals */
+img {
+  max-width: 100%;
+  height: auto;
+  /* Prevent layout shift */
+  aspect-ratio: attr(width) / attr(height);
+}
+
+/* Custom scrollbar with better performance */
 ::-webkit-scrollbar {
   width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--background); /* Use variable for track */
+  background: hsl(var(--background));
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #22c55e; /* Green for thumb */
+  background: #22c55e;
   border-radius: 4px;
+  /* Add smooth transitions */
+  transition: background-color 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #16a34a; /* Darker green on hover */
+  background: #16a34a;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Performance optimizations */
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+/* Contain layout shifts */
+.contain-layout {
+  contain: layout;
+}
+
+.contain-paint {
+  contain: paint;
 }

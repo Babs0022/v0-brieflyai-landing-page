@@ -3,8 +3,23 @@
 import { motion } from "framer-motion"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
+import { trackEvent, trackConversion } from "@/components/analytics"
 
 export function FinalCTA() {
+  const handleFinalCTAClick = () => {
+    trackEvent("final_cta_click", {
+      event_category: "conversion",
+      event_label: "bottom_cta_signup",
+      page_location: "final_cta_section",
+      value: 0,
+    })
+
+    trackConversion("final_signup_attempt", {
+      currency: "USD",
+      value: 0,
+    })
+  }
+
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4 text-center">
@@ -24,7 +39,12 @@ export function FinalCTA() {
               size="lg"
               className="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-xl px-12 py-6"
             >
-              <a href="https://dash.brieflyai.xyz" target="_blank" rel="noopener noreferrer">
+              <a
+                href="https://dash.brieflyai.xyz"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleFinalCTAClick}
+              >
                 Get Started Free
                 <ArrowRight className="ml-2 w-6 h-6" />
               </a>

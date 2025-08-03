@@ -25,6 +25,7 @@
     --ring: 142 76% 36%; /* Green */
     --radius: 0.5rem;
     --font-inter: "Inter", sans-serif;
+    --font-playfair-display: "Playfair Display", serif; /* Add Playfair Display font variable */
   }
 
   /* Light mode variables */
@@ -74,6 +75,7 @@
   h4,
   h5,
   h6 {
+    font-family: var(--font-playfair-display); /* Update heading font-family */
     font-weight: 600;
     line-height: 1.2;
     letter-spacing: -0.025em;
@@ -81,7 +83,7 @@
 
   h1 {
     font-size: clamp(2.5rem, 5vw, 4.5rem);
-    font-weight: 700;
+    font-weight: 700; /* Update h1 font-weight */
     letter-spacing: -0.04em;
   }
 

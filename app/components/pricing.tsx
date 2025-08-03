@@ -5,12 +5,12 @@ import { Check, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { trackEvent, trackConversion } from "@/components/analytics"
-import { useState } from "react"
+import { useState } from "react" // Re-import useState
 import { PricingFAQ } from "./pricing-faq"
 import { PricingComparisonTable } from "./pricing-comparison-table"
 
 export function Pricing() {
-  const [isAnnual, setIsAnnual] = useState(false)
+  const [isAnnual, setIsAnnual] = useState(false) // Re-add isAnnual state
 
   const getDisplayedPrice = (monthlyPrice: number) => {
     return isAnnual ? (monthlyPrice * 12 * 0.9).toFixed(0) : monthlyPrice.toFixed(0)
@@ -18,49 +18,49 @@ export function Pricing() {
 
   const pricingTiers = [
     {
-      name: "Free",
+      name: "Briefly AI Free",
       monthlyPrice: 0,
       description: "Perfect for individuals getting started with AI-powered creation.",
       features: [
-        "Access to AI Copilot (limited usage)",
-        "Basic content generation",
-        "Standard prompt optimization",
-        "Community support",
+        "Limited access to Copilot (powered by Gemini 2.5 Pro)",
+        "100 Monthly Credits (across specialized tools)",
+        "Store up to 10 deleted conversations",
+        "Community Support",
       ],
       buttonText: "Start for Free",
       href: "https://dash.brieflyai.xyz/signup",
       isHighlighted: false,
     },
     {
-      name: "Pro",
-      monthlyPrice: 29,
+      name: "Briefly AI Pro",
+      monthlyPrice: 20,
       description: "For power users and professionals needing advanced capabilities.",
       features: [
-        "Unlimited AI Copilot usage",
-        "Advanced content generation",
-        "Priority prompt optimization",
-        "Access to all 4 specialized tools",
+        "Unlimited access to Copilot (powered by Gemini 2.5 Pro)",
+        "1500 Monthly Credits (across specialized tools)",
+        "Store more deleted conversations",
+        "Copilot Personalizer",
         "Priority email support",
-        "Commercial license",
       ],
       buttonText: "Get Pro",
       href: "https://dash.brieflyai.xyz/signup?plan=pro",
       isHighlighted: true,
     },
     {
-      name: "Business",
-      monthlyPrice: 99,
+      name: "Briefly AI Unlimited",
+      monthlyPrice: 75,
       description: "Ideal for small businesses and agencies requiring extensive usage.",
       features: [
-        "Everything in Pro",
-        "Higher usage limits for all tools",
-        "Dedicated account manager",
-        "Early access to new features",
-        "Custom integrations (upon request)",
-        "Enhanced security features",
+        "Everything in Pro (Copilot)",
+        "Unlimited Monthly Credits (across specialized tools)",
+        "Store Unlimited deleted conversations",
+        "Copilot Personalizer",
+        "Early Access to new features",
+        "Custom Integrations (upon request)",
+        "Priority email support",
       ],
-      buttonText: "Get Business",
-      href: "https://dash.brieflyai.xyz/signup?plan=business",
+      buttonText: "Get Unlimited",
+      href: "https://dash.brieflyai.xyz/signup?plan=unlimited",
       isHighlighted: false,
     },
   ]
@@ -91,10 +91,12 @@ export function Pricing() {
             Choose the plan that best fits your creative and development needs. No hidden fees, no long-term contracts.
           </p>
 
+          {/* Beta Phase Banner */}
           <div className="bg-green-500/20 border border-green-500/30 text-green-400 px-6 py-3 rounded-lg mb-8 max-w-xl mx-auto font-medium">
             🎉 All services are currently FREE during our Beta Phase! 🎉
           </div>
 
+          {/* Monthly/Annual Toggle */}
           <div className="flex justify-center items-center space-x-4 mt-8 mb-12">
             <Button
               variant={!isAnnual ? "default" : "outline"}

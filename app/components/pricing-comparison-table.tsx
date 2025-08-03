@@ -6,66 +6,59 @@ import { Check, X } from "lucide-react"
 export function PricingComparisonTable() {
   const features = [
     {
-      name: "AI Copilot Usage",
-      free: "Limited",
-      pro: "Unlimited",
-      business: "Unlimited (Higher Priority)",
+      name: "Briefly Copilot",
+      free: "Limited access to Copilot (powered by Gemini 2.5 Pro)",
+      pro: "Unlimited access to Copilot (powered by Gemini 2.5 Pro)",
+      unlimited: "Everything in Pro",
     },
     {
-      name: "Content Generation",
-      free: "Basic",
-      pro: "Advanced",
-      business: "Advanced",
+      name: "Monthly Credits",
+      free: "100 (across specialized tools)",
+      pro: "1500 (across specialized tools)",
+      unlimited: "Unlimited (across specialized tools)",
     },
     {
-      name: "Prompt Optimization",
-      free: "Standard",
-      pro: "Priority",
-      business: "Priority",
+      name: "Unlock Trash",
+      free: "Store up to 10 deleted conversations",
+      pro: "Store more deleted conversations",
+      unlimited: "Store Unlimited deleted conversations",
     },
     {
-      name: "Specialized Tools Access",
-      free: false,
-      pro: true,
-      business: true,
+      name: "Copilot Personalizer",
+      free: "-",
+      pro: "Yes",
+      unlimited: "Copilot Personalizer",
     },
     {
-      name: "Email Support",
-      free: "Community",
-      pro: "Priority",
-      business: "Priority",
+      name: "Early Access",
+      free: "-",
+      pro: "-",
+      unlimited: "Yes, to new features",
     },
     {
-      name: "Commercial License",
-      free: false,
-      pro: true,
-      business: true,
+      name: "Custom Integration",
+      free: "-",
+      pro: "-",
+      unlimited: "Yes (request)",
     },
     {
-      name: "Dedicated Account Manager",
-      free: false,
-      pro: false,
-      business: true,
-    },
-    {
-      name: "Early Access to New Features",
-      free: false,
-      pro: true,
-      business: true,
-    },
-    {
-      name: "Custom Integrations",
-      free: false,
-      pro: false,
-      business: "Upon Request",
-    },
-    {
-      name: "Enhanced Security Features",
-      free: false,
-      pro: false,
-      business: true,
+      name: "Support",
+      free: "Community Support",
+      pro: "Priority email support",
+      unlimited: "Priority email support",
     },
   ]
+
+  const renderCellContent = (content: string | boolean) => {
+    if (typeof content === "boolean") {
+      return content ? (
+        <Check className="w-5 h-5 text-green-400 mx-auto" />
+      ) : (
+        <X className="w-5 h-5 text-muted-foreground mx-auto" />
+      )
+    }
+    return <span className="text-muted-foreground font-light">{content}</span>
+  }
 
   return (
     <section className="py-20 bg-background">
@@ -81,48 +74,18 @@ export function PricingComparisonTable() {
               <thead>
                 <tr className="border-b border-border">
                   <th className="py-4 px-4 font-semibold text-lg">Feature</th>
-                  <th className="py-4 px-4 font-semibold text-lg text-center">Free</th>
-                  <th className="py-4 px-4 font-semibold text-lg text-center">Pro</th>
-                  <th className="py-4 px-4 font-semibold text-lg text-center">Business</th>
+                  <th className="py-4 px-4 font-semibold text-lg text-center">Briefly AI Free</th>
+                  <th className="py-4 px-4 font-semibold text-lg text-center">Briefly AI Pro (Most Popular)</th>
+                  <th className="py-4 px-4 font-semibold text-lg text-center">Briefly AI Unlimited</th>
                 </tr>
               </thead>
               <tbody>
                 {features.map((feature, index) => (
                   <tr key={index} className="border-b border-border last:border-b-0">
                     <td className="py-4 px-4 font-medium">{feature.name}</td>
-                    <td className="py-4 px-4 text-center">
-                      {typeof feature.free === "boolean" ? (
-                        feature.free ? (
-                          <Check className="w-5 h-5 text-green-400 mx-auto" />
-                        ) : (
-                          <X className="w-5 h-5 text-muted-foreground mx-auto" />
-                        )
-                      ) : (
-                        <span className="text-muted-foreground font-light">{feature.free}</span>
-                      )}
-                    </td>
-                    <td className="py-4 px-4 text-center">
-                      {typeof feature.pro === "boolean" ? (
-                        feature.pro ? (
-                          <Check className="w-5 h-5 text-green-400 mx-auto" />
-                        ) : (
-                          <X className="w-5 h-5 text-muted-foreground mx-auto" />
-                        )
-                      ) : (
-                        <span className="text-muted-foreground font-light">{feature.pro}</span>
-                      )}
-                    </td>
-                    <td className="py-4 px-4 text-center">
-                      {typeof feature.business === "boolean" ? (
-                        feature.business ? (
-                          <Check className="w-5 h-5 text-green-400 mx-auto" />
-                        ) : (
-                          <X className="w-5 h-5 text-muted-foreground mx-auto" />
-                        )
-                      ) : (
-                        <span className="text-muted-foreground font-light">{feature.business}</span>
-                      )}
-                    </td>
+                    <td className="py-4 px-4 text-center">{renderCellContent(feature.free)}</td>
+                    <td className="py-4 px-4 text-center">{renderCellContent(feature.pro)}</td>
+                    <td className="py-4 px-4 text-center">{renderCellContent(feature.unlimited)}</td>
                   </tr>
                 ))}
               </tbody>

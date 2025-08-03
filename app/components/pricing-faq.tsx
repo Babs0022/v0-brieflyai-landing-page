@@ -8,7 +8,7 @@ export function PricingFAQ() {
     {
       question: "What is the difference between monthly and annual billing?",
       answer:
-        "Monthly billing allows you to pay on a month-to-month basis, offering flexibility. Annual billing provides a 10% discount on the total price, making it more cost-effective for long-term users. Both plans offer the same features within their respective tiers.",
+        "Our pricing is straightforward monthly billing, offering flexibility. All plans offer the same features within their respective tiers.",
     },
     {
       question: "Can I change my plan later?",
@@ -21,19 +21,19 @@ export function PricingFAQ() {
         "We accept all major credit cards (Visa, MasterCard, American Express, Discover). All payments are securely processed by our third-party payment partners.",
     },
     {
+      question: "What are 'Copilot Personalizer' and 'Unlock Trash'?",
+      answer:
+        "The Copilot Personalizer allows you to customize your AI copilot's behavior and responses to better suit your workflow and preferences. 'Unlock Trash' provides enhanced storage for deleted conversations, allowing you to retrieve them if needed. Both features are included in the Pro and Unlimited plans.",
+    },
+    {
       question: "Is there a free trial for paid plans?",
       answer:
         "Our Free plan offers a great way to get started with limited usage. Paid plans do not have a separate free trial, but you can upgrade at any time. We offer a 30-day money-back guarantee if you're not satisfied with a paid plan.",
     },
     {
-      question: "What is your refund policy?",
-      answer:
-        "We offer a 30-day money-back guarantee for all new paid subscriptions. If you are not satisfied within the first 30 days, you can request a full refund. After 30 days, refunds are not typically provided, but you can cancel your subscription at any time to prevent future charges.",
-    },
-    {
       question: "Do you offer custom plans for enterprises?",
       answer:
-        "While our Business plan covers extensive usage, for very large organizations with unique requirements, please contact us directly at Elijah@brieflyai.xyz to discuss custom solutions.",
+        "For very large organizations with unique requirements, please contact us directly at Elijah@brieflyai.xyz to discuss custom solutions.",
     },
   ]
 

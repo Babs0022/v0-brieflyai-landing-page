@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter, Playfair_Display } from "next/font/google"
+import { Inter, Playfair_Display } from 'next/font/google'
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { GoogleAnalytics } from "@/components/analytics"
@@ -22,8 +22,8 @@ const playfairDisplay = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "BrieflyAI - An AI Assistant That Actually Gets It",
-    template: "%s | BrieflyAI",
+    default: "KorbinAI - An AI Assistant That Actually Gets It",
+    template: "%s | KorbinAI",
   },
   description:
     "Your most resourceful partner for brainstorming, coding, research, content creation, and strategic planning. Built on advanced AI frameworks that understand what you need before you ask.",
@@ -41,42 +41,42 @@ export const metadata: Metadata = {
     "contextual AI",
     "strategic planning AI",
   ],
-  authors: [{ name: "BrieflyAI Team" }],
-  creator: "BrieflyAI",
-  publisher: "BrieflyAI",
+  authors: [{ name: "KorbinAI Team" }],
+  creator: "KorbinAI",
+  publisher: "KorbinAI",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://brieflyai.xyz"),
+  metadataBase: new URL("https://korbinai.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://brieflyai.xyz",
-    title: "BrieflyAI - An AI Assistant That Actually Gets It",
+    url: "https://korbinai.com",
+    title: "KorbinAI - An AI Assistant That Actually Gets It",
     description:
       "Your most resourceful partner for brainstorming, coding, research, content creation, and strategic planning. Built to understand what you need before you ask.",
-    siteName: "BrieflyAI",
+    siteName: "KorbinAI",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "BrieflyAI - AI Assistant That Actually Gets It",
+        alt: "KorbinAI - AI Assistant That Actually Gets It",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "BrieflyAI - An AI Assistant That Actually Gets It",
+    title: "KorbinAI - An AI Assistant That Actually Gets It",
     description:
       "Your most resourceful partner for brainstorming, coding, research, content creation, and strategic planning.",
-    site: "@trybrieflyai",
-    creator: "@trybrieflyai",
+    site: "@korbinai",
+    creator: "@korbinai",
     images: ["/og-image.png"],
   },
   robots: {

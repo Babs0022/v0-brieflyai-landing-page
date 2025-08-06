@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Brain, MessageSquare, Target } from "lucide-react"
+import { Brain, MessageSquare, Target } from 'lucide-react'
 
 export function ProblemStatement() {
   const problems = [
@@ -17,7 +17,6 @@ export function ProblemStatement() {
     },
     {
       icon: Target,
-      title: "Lack of Strategic Thinking",
       description:
         "AI that executes tasks but doesn't help you think through the bigger picture or guide your decisions",
     },
@@ -51,8 +50,8 @@ export function ProblemStatement() {
               transition={{ delay: index * 0.2 }}
               className="text-center"
             >
-              <div className="w-16 h-16 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-                <problem.icon className="w-8 h-8 text-green-400" />
+              <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
+                <problem.icon className="w-8 h-8 text-purple-400" />
               </div>
               <h3 className="text-xl md:text-2xl font-semibold mb-4 tracking-tight">{problem.title}</h3>
               <p className="text-muted-foreground leading-relaxed font-light">{problem.description}</p>

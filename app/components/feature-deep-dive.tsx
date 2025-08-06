@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Code, Wand2, Route } from "lucide-react"
+import { Code, Wand2, Route } from 'lucide-react'
 
 export function FeatureDeepDive() {
   const features = [
@@ -11,7 +11,7 @@ export function FeatureDeepDive() {
       description:
         "Transform natural language into production-ready React components. Every component is responsive, accessible, and follows best practices.",
       icon: Code,
-      color: "from-green-500 to-green-700",
+      color: "from-purple-500 to-purple-700",
     },
     {
       title: "Content Creation",
@@ -19,7 +19,7 @@ export function FeatureDeepDive() {
       description:
         "Step-by-step content creation that maintains your brand voice and optimizes for search engines automatically.",
       icon: Wand2,
-      color: "from-green-600 to-green-800",
+      color: "from-purple-600 to-purple-800",
     },
     {
       title: "Smart Workflow",
@@ -27,7 +27,7 @@ export function FeatureDeepDive() {
       description:
         "Intelligent routing that suggests the perfect tool for your task and maintains context across your entire project.",
       icon: Route,
-      color: "from-green-700 to-green-900",
+      color: "from-purple-700 to-purple-900",
     },
   ]
 
@@ -56,17 +56,17 @@ export function FeatureDeepDive() {
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-3xl font-medium mb-2">{feature.title}</h3>
-                <p className="text-green-400 mb-4">{feature.subtitle}</p>
+                <p className="text-purple-400 mb-4">{feature.subtitle}</p>
                 <p className="text-muted-foreground leading-relaxed">{feature.description}</p>
               </div>
               <div className="flex-1">
                 <div className="bg-secondary/50 backdrop-blur-sm rounded-2xl border border-border p-8 shadow-2xl">
                   <div className="bg-background rounded-lg p-4 font-mono text-sm">
-                    <div className="text-green-400 mb-2">
+                    <div className="text-purple-400 mb-2">
                       {">"} {feature.title.toLowerCase()} example
                     </div>
                     <div className="text-muted-foreground">✨ Processing...</div>
-                    <div className="text-green-400">✅ Ready in seconds</div>
+                    <div className="text-purple-400">✅ Ready in seconds</div>
                   </div>
                 </div>
               </div>

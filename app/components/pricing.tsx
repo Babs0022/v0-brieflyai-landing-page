@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Check, ArrowRight } from "lucide-react"
+import { Check, ArrowRight } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { trackEvent, trackConversion } from "@/components/analytics"
@@ -18,7 +18,7 @@ export function Pricing() {
 
   const pricingTiers = [
     {
-      name: "Briefly AI Free",
+      name: "Korbin AI Free",
       monthlyPrice: 0,
       description: "Perfect for individuals getting started with AI-powered creation.",
       features: [
@@ -28,11 +28,11 @@ export function Pricing() {
         "Community Support",
       ],
       buttonText: "Start for Free",
-      href: "https://dash.brieflyai.xyz/signup",
+      href: "https://dash.korbinai.com/signup",
       isHighlighted: false,
     },
     {
-      name: "Briefly AI Pro",
+      name: "Korbin AI Pro",
       monthlyPrice: 20,
       description: "For power users and professionals needing advanced capabilities.",
       features: [
@@ -43,11 +43,10 @@ export function Pricing() {
         "Priority email support",
       ],
       buttonText: "Get Pro",
-      href: "https://dash.brieflyai.xyz/signup?plan=pro",
       isHighlighted: true,
     },
     {
-      name: "Briefly AI Unlimited",
+      name: "Korbin AI Unlimited",
       monthlyPrice: 75,
       description: "Ideal for small businesses and agencies requiring extensive usage.",
       features: [
@@ -60,7 +59,7 @@ export function Pricing() {
         "Priority email support",
       ],
       buttonText: "Get Unlimited",
-      href: "https://dash.brieflyai.xyz/signup?plan=unlimited",
+      href: "https://dash.korbinai.com/signup?plan=unlimited",
       isHighlighted: false,
     },
   ]
@@ -92,7 +91,7 @@ export function Pricing() {
           </p>
 
           {/* Beta Phase Banner */}
-          <div className="bg-green-500/20 border border-green-500/30 text-green-400 px-6 py-3 rounded-lg mb-8 max-w-xl mx-auto font-medium">
+          <div className="bg-purple-500/20 border border-purple-500/30 text-purple-400 px-6 py-3 rounded-lg mb-8 max-w-xl mx-auto font-medium">
             🎉 All services are currently FREE during our Beta Phase! 🎉
           </div>
 
@@ -103,7 +102,7 @@ export function Pricing() {
               onClick={() => setIsAnnual(false)}
               className={`px-6 py-3 rounded-full text-base font-medium ${
                 !isAnnual
-                  ? "bg-green-500 hover:bg-green-600 text-white"
+                  ? "bg-purple-500 hover:bg-purple-600 text-white"
                   : "bg-secondary/50 border-border text-foreground hover:bg-secondary"
               }`}
             >
@@ -114,12 +113,12 @@ export function Pricing() {
               onClick={() => setIsAnnual(true)}
               className={`px-6 py-3 rounded-full text-base font-medium relative ${
                 isAnnual
-                  ? "bg-green-500 hover:bg-green-600 text-white"
+                  ? "bg-purple-500 hover:bg-purple-600 text-white"
                   : "bg-secondary/50 border-border text-foreground hover:bg-secondary"
               }`}
             >
               Annual Billing
-              <span className="absolute -top-3 -right-3 bg-green-500 text-white text-xs px-2 py-1 rounded-full rotate-6 shadow-md">
+              <span className="absolute -top-3 -right-3 bg-purple-500 text-white text-xs px-2 py-1 rounded-full rotate-6 shadow-md">
                 10% OFF!
               </span>
             </Button>
@@ -138,12 +137,12 @@ export function Pricing() {
             >
               <Card
                 className={`bg-secondary/50 backdrop-blur-sm border ${
-                  tier.isHighlighted ? "border-green-500/70 border-2 shadow-2xl" : "border-border"
-                } hover:border-green-600 transition-all duration-300 h-full flex flex-col`}
+                  tier.isHighlighted ? "border-purple-500/70 border-2 shadow-2xl" : "border-border"
+                } hover:border-purple-600 transition-all duration-300 h-full flex flex-col`}
               >
                 <CardContent className="p-8 flex flex-col flex-grow">
                   {tier.isHighlighted && (
-                    <div className="bg-gradient-to-r from-green-500 to-green-700 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 inline-block self-center">
+                    <div className="bg-gradient-to-r from-purple-500 to-purple-700 text-white px-4 py-2 rounded-full text-sm font-medium mb-6 inline-block self-center">
                       Most Popular
                     </div>
                   )}
@@ -156,7 +155,7 @@ export function Pricing() {
                           ${getDisplayedPrice(tier.monthlyPrice)}
                         </span>
                       )}
-                      <span className="text-green-400">$0</span>
+                      <span className="text-purple-400">$0</span>
                       <span className="text-lg text-muted-foreground">
                         {tier.monthlyPrice === 0 ? "/month" : isAnnual ? "/year (Beta)" : "/month (Beta)"}
                       </span>
@@ -166,7 +165,7 @@ export function Pricing() {
                   <div className="space-y-3 mb-8 text-left">
                     {tier.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-3">
-                        <Check className="w-5 h-5 text-green-400 flex-shrink-0" />
+                        <Check className="w-5 h-5 text-purple-400 flex-shrink-0" />
                         <span className="text-base font-light">{feature}</span>
                       </div>
                     ))}
@@ -176,7 +175,7 @@ export function Pricing() {
                     asChild
                     className={`w-full mt-auto text-lg py-4 h-14 font-medium ${
                       tier.isHighlighted
-                        ? "bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800"
+                        ? "bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800"
                         : "bg-primary hover:bg-primary/90"
                     }`}
                   >

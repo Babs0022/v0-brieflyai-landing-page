@@ -3,7 +3,7 @@ export const dynamic = "force-static"
 import type { MetadataRoute } from "next"
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://brieflyai.xyz"
+  const baseUrl = "https://korbinai.com"
 
   return [
     {

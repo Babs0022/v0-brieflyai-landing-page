@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { trackEvent, trackConversion } from "@/components/analytics"
 
@@ -27,8 +27,8 @@ export function FinalCTA() {
           <div className="bg-gradient-to-br from-secondary to-background rounded-3xl border border-border p-12 shadow-2xl">
             <h2 className="text-3xl md:text-5xl font-medium mb-6">
               Join 50+ creators building faster with{" "}
-              <span className="bg-gradient-to-r from-green-400 to-green-600 bg-clip-text text-transparent">
-                BrieflyAI
+              <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
+                KorbinAI
               </span>
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
@@ -37,10 +37,10 @@ export function FinalCTA() {
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 text-xl px-12 py-6"
+              className="bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-xl px-12 py-6"
             >
               <a
-                href="https://dash.brieflyai.xyz"
+                href="https://dash.korbinai.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleFinalCTAClick}

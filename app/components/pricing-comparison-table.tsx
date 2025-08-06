@@ -1,12 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Check, X } from "lucide-react"
+import { Check, X } from 'lucide-react'
 
 export function PricingComparisonTable() {
   const features = [
     {
-      name: "Briefly Copilot",
+      name: "Korbin Copilot",
       free: "Limited access to Copilot (powered by Gemini 2.5 Pro)",
       pro: "Unlimited access to Copilot (powered by Gemini 2.5 Pro)",
       unlimited: "Everything in Pro",
@@ -52,7 +52,7 @@ export function PricingComparisonTable() {
   const renderCellContent = (content: string | boolean) => {
     if (typeof content === "boolean") {
       return content ? (
-        <Check className="w-5 h-5 text-green-400 mx-auto" />
+        <Check className="w-5 h-5 text-purple-400 mx-auto" />
       ) : (
         <X className="w-5 h-5 text-muted-foreground mx-auto" />
       )
@@ -74,9 +74,9 @@ export function PricingComparisonTable() {
               <thead>
                 <tr className="border-b border-border">
                   <th className="py-4 px-4 font-semibold text-lg">Feature</th>
-                  <th className="py-4 px-4 font-semibold text-lg text-center">Briefly AI Free</th>
-                  <th className="py-4 px-4 font-semibold text-lg text-center">Briefly AI Pro (Most Popular)</th>
-                  <th className="py-4 px-4 font-semibold text-lg text-center">Briefly AI Unlimited</th>
+                  <th className="py-4 px-4 font-semibold text-lg text-center">Korbin AI Free</th>
+                  <th className="py-4 px-4 font-semibold text-lg text-center">Korbin AI Pro (Most Popular)</th>
+                  <th className="py-4 px-4 font-semibold text-lg text-center">Korbin AI Unlimited</th>
                 </tr>
               </thead>
               <tbody>

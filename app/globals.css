@@ -10,19 +10,19 @@
     --card-foreground: 180 10% 95%;
     --popover: 220 10% 3.9%;
     --popover-foreground: 180 10% 95%;
-    --primary: 142 76% 36%; /* Green */
-    --primary-foreground: 220 10% 3.9%; /* Dark text on green */
+    --primary: 271 91% 65%; /* Purple */
+    --primary-foreground: 220 10% 3.9%; /* Dark text on purple */
     --secondary: 220 10% 15%;
     --secondary-foreground: 180 10% 70%;
     --muted: 220 10% 15%;
     --muted-foreground: 180 10% 70%;
-    --accent: 142 76% 36%; /* Green */
+    --accent: 271 91% 65%; /* Purple */
     --accent-foreground: 220 10% 3.9%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 180 10% 95%;
     --border: 220 10% 25%;
     --input: 220 10% 20%;
-    --ring: 142 76% 36%; /* Green */
+    --ring: 271 91% 65%; /* Purple */
     --radius: 0.5rem;
     --font-inter: "Inter", sans-serif;
     --font-playfair-display: "Playfair Display", serif; /* Add Playfair Display font variable */
@@ -36,19 +36,19 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 142 76% 36%; /* Green */
-    --primary-foreground: 0 0% 100%; /* White text on green */
+    --primary: 271 91% 65%; /* Purple */
+    --primary-foreground: 0 0% 100%; /* White text on purple */
     --secondary: 210 40% 96.1%; /* Light gray */
     --secondary-foreground: 222.2 47.4% 11.2%; /* Darker gray */
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 142 76% 36%; /* Green */
+    --accent: 271 91% 65%; /* Purple */
     --accent-foreground: 222.2 84% 4.9%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
     --border: 214.3 31.8% 91.4%;
     --input: 0 0% 100%;
-    --ring: 142 76% 36%; /* Green */
+    --ring: 271 91% 65%; /* Purple */
   }
 }
 
@@ -135,14 +135,14 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #22c55e;
+  background: #a855f7;
   border-radius: 4px;
   /* Add smooth transitions */
   transition: background-color 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #16a34a;
+  background: #9333ea;
 }
 
 /* Reduce motion for users who prefer it */

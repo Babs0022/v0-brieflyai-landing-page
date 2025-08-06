@@ -4,8 +4,8 @@ import type { MetadataRoute } from "next"
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "BrieflyAI",
-    short_name: "BrieflyAI",
+    name: "KorbinAI",
+    short_name: "KorbinAI",
     description: "The AI copilot that turns plain English into production-ready code and professional content.",
     start_url: "/",
     display: "standalone",

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Menu, X } from "lucide-react"
+import { Menu, X } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -55,58 +55,58 @@ export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-3 cursor-pointer" onClick={handleLogoClick}>
-          <img src="/logo.png" alt="BrieflyAI Logo" className="w-8 h-8 object-contain" />
+          <img src="/logo.png" alt="KorbinAI Logo" className="w-8 h-8 object-contain" />
           <span className="text-xl font-semibold tracking-tight">
-            Briefly<span className="text-green-400">AI</span>
+            Korbin<span className="text-purple-400">AI</span>
           </span>
         </Link>
 
         <nav className="hidden md:flex items-center space-x-6">
           <a
             href="#problem"
-            className="hover:text-green-400 transition-colors font-medium text-sm"
+            className="hover:text-purple-400 transition-colors font-medium text-sm"
             onClick={() => handleNavClick("problem")}
           >
             Problem
           </a>
           <a
             href="#copilot"
-            className="hover:text-green-400 transition-colors font-medium text-sm"
+            className="hover:text-purple-400 transition-colors font-medium text-sm"
             onClick={() => handleNavClick("copilot")}
           >
             Copilot
           </a>
           <a
             href="#tools"
-            className="hover:text-green-400 transition-colors font-medium text-sm"
+            className="hover:text-purple-400 transition-colors font-medium text-sm"
             onClick={() => handleNavClick("tools")}
           >
             Tools
           </a>
           <a
             href="#comparison"
-            className="hover:text-green-400 transition-colors font-medium text-sm"
+            className="hover:text-purple-400 transition-colors font-medium text-sm"
             onClick={() => handleNavClick("comparison")}
           >
             Comparison
           </a>
           <a
             href="#solutions"
-            className="hover:text-green-400 transition-colors font-medium text-sm"
+            className="hover:text-purple-400 transition-colors font-medium text-sm"
             onClick={() => handleNavClick("solutions")}
           >
             Solutions
           </a>
           <Link
             href="/pricing"
-            className="hover:text-green-400 transition-colors font-medium text-sm"
+            className="hover:text-purple-400 transition-colors font-medium text-sm"
             onClick={() => handleNavClick("pricing")}
           >
             Pricing
           </Link>
           <a
             href="#faq"
-            className="hover:text-green-400 transition-colors font-medium text-sm"
+            className="hover:text-purple-400 transition-colors font-medium text-sm"
             onClick={() => handleNavClick("faq")}
           >
             FAQ
@@ -116,7 +116,7 @@ export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
         <div className="hidden md:flex items-center space-x-4">
           <Button asChild variant="ghost" className="text-foreground hover:bg-secondary font-medium">
             <a
-              href="https://dash.brieflyai.xyz/login"
+              href="https://dash.korbinai.com/login"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleLoginClick}
@@ -126,10 +126,10 @@ export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
           </Button>
           <Button
             asChild
-            className="bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 font-medium"
+            className="bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 font-medium"
           >
             <a
-              href="https://dash.brieflyai.xyz/signup"
+              href="https://dash.korbinai.com/signup"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleSignUpClick}
@@ -154,56 +154,56 @@ export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
           <div className="container mx-auto px-4 py-4 space-y-4">
             <a
               href="#problem"
-              className="block hover:text-green-400 transition-colors font-medium"
+              className="block hover:text-purple-400 transition-colors font-medium"
               onClick={() => handleNavClick("problem")}
             >
               Problem
             </a>
             <a
               href="#copilot"
-              className="block hover:text-green-400 transition-colors font-medium"
+              className="block hover:text-purple-400 transition-colors font-medium"
               onClick={() => handleNavClick("copilot")}
             >
               Copilot
             </a>
             <a
               href="#tools"
-              className="block hover:text-green-400 transition-colors font-medium"
+              className="block hover:text-purple-400 transition-colors font-medium"
               onClick={() => handleNavClick("tools")}
             >
               Tools
             </a>
             <a
               href="#comparison"
-              className="block hover:text-green-400 transition-colors font-medium"
+              className="block hover:text-purple-400 transition-colors font-medium"
               onClick={() => handleNavClick("comparison")}
             >
               Comparison
             </a>
             <a
               href="#solutions"
-              className="block hover:text-green-400 transition-colors font-medium"
+              className="block hover:text-purple-400 transition-colors font-medium"
               onClick={() => handleNavClick("solutions")}
             >
               Solutions
             </a>
             <Link
               href="/pricing"
-              className="block hover:text-green-400 transition-colors font-medium"
+              className="block hover:text-purple-400 transition-colors font-medium"
               onClick={() => handleNavClick("pricing")}
             >
               Pricing
             </Link>
             <a
               href="#faq"
-              className="block hover:text-green-400 transition-colors font-medium"
+              className="block hover:text-purple-400 transition-colors font-medium"
               onClick={() => handleNavClick("faq")}
             >
               FAQ
             </a>
             <Button asChild variant="ghost" className="w-full text-foreground hover:bg-secondary font-medium">
               <a
-                href="https://dash.brieflyai.xyz/login"
+                href="https://dash.korbinai.com/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleLoginClick}
@@ -213,10 +213,10 @@ export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
             </Button>
             <Button
               asChild
-              className="w-full bg-gradient-to-r from-green-500 to-green-700 hover:from-green-600 hover:to-green-800 font-medium"
+              className="w-full bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 font-medium"
             >
               <a
-                href="https://dash.brieflyai.xyz/signup"
+                href="https://dash.korbinai.com/signup"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleSignUpClick}

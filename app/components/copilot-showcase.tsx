@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Brain, Lightbulb, Code, Search, FileText, BarChart3 } from "lucide-react"
+import { Brain, Lightbulb, Code, Search, FileText, BarChart3 } from 'lucide-react'
 import { Card, CardContent } from "@/components/ui/card"
 
 export function CopilotShowcase() {
@@ -50,7 +50,7 @@ export function CopilotShowcase() {
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-20">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight">
-            Meet your new <span className="text-green-400">strategic partner</span>
+            Meet your new <span className="text-purple-400">strategic partner</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 leading-relaxed font-light">
             Built on advanced AI frameworks that enable true understanding and strategic thinking
@@ -70,15 +70,15 @@ export function CopilotShowcase() {
               whileHover={{ y: -5 }}
               className="group"
             >
-              <Card className="bg-secondary/50 backdrop-blur-sm border-border hover:border-green-600 transition-all duration-300 h-full">
+              <Card className="bg-secondary/50 backdrop-blur-sm border-border hover:border-purple-600 transition-all duration-300 h-full">
                 <CardContent className="p-6 lg:p-8">
-                  <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-green-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                     <capability.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-xl md:text-2xl font-semibold mb-4 tracking-tight">{capability.title}</h3>
                   <p className="text-muted-foreground mb-6 leading-relaxed font-light">{capability.description}</p>
                   <div className="bg-background/50 rounded-lg p-4 border border-border">
-                    <p className="text-sm text-green-400 font-medium mb-2">Example:</p>
+                    <p className="text-sm text-purple-400 font-medium mb-2">Example:</p>
                     <p className="text-sm text-muted-foreground font-light leading-relaxed">{capability.example}</p>
                   </div>
                 </CardContent>

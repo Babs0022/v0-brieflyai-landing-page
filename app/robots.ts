@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: ["/api/", "/admin/"],
     },
-    sitemap: "https://brieflyai.xyz/sitemap.xml",
+    sitemap: "https://korbinai.com/sitemap.xml",
   }
 }

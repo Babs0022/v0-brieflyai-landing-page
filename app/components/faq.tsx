@@ -71,31 +71,33 @@ export function FAQ() {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="space-y-4">
-            {faqs.map((faq, index) => (
-              <AccordionItem
-                key={index}
-                value={`item-${index}`}
-                className="bg-secondary/50 backdrop-blur-sm border border-border rounded-lg px-6"
-                itemScope
-                itemType="https://schema.org/Question"
-              >
-                <AccordionTrigger
-                  className="text-left hover:text-purple-400 transition-colors font-medium"
-                  itemProp="name"
-                >
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent
-                  className="text-muted-foreground leading-relaxed font-light"
+          <div itemProp="mainEntity" itemScope itemType="https://schema.org/ItemList"> {/* Added this wrapper */}
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, index) => (
+                <AccordionItem
+                  key={index}
+                  value={`item-${index}`}
+                  className="bg-secondary/50 backdrop-blur-sm border border-border rounded-lg px-6"
                   itemScope
-                  itemType="https://schema.org/Answer"
+                  itemType="https://schema.org/Question"
                 >
-                  <div itemProp="text">{faq.answer}</div>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+                  <AccordionTrigger
+                    className="text-left hover:text-purple-400 transition-colors font-medium"
+                    itemProp="name"
+                  >
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent
+                    className="text-muted-foreground leading-relaxed font-light"
+                    itemScope
+                    itemType="https://schema.org/Answer"
+                  >
+                    <div itemProp="text">{faq.answer}</div>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div> {/* Closing div for mainEntity */}
         </motion.div>
       </div>
     </section>

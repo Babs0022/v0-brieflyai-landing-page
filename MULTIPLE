@@ -1,0 +1,186 @@
+// app/globals.css
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-instrument-serif);
+  font-weight: 400; /* lighter for Instrument Serif */
+  line-height: 1.2;
+  letter-spacing: -0.005em;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 400; /* no faux-bold */
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: -0.008em;
+}
+
+h3 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 400;
+  letter-spacing: -0.005em;
+}
+
+// app/components/header.tsx
+// Assuming the auth links are located within a Header component
+const Header = () => {
+  const handleLoginClick = () => {
+    // Login click handler logic
+  };
+
+  const handleSignUpClick = () => {
+    // Sign Up click handler logic
+  };
+
+  return (
+    <div>
+      {/* Desktop links */}
+      <a
+        href="https://app.korbinai.com/login"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={handleLoginClick}
+      >
+        Login
+      </a>
+      <a
+        href="https://app.korbinai.com/signup"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={handleSignUpClick}
+      >
+        Sign Up
+      </a>
+
+      {/* Mobile links */}
+      <a
+        href="https://app.korbinai.com/login"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={handleLoginClick}
+      >
+        Login
+      </a>
+      <a
+        href="https://app.korbinai.com/signup"
+        target="_blank"
+        rel="noopener noreferrer"
+        onClick={handleSignUpClick}
+      >
+        Sign Up
+      </a>
+    </div>
+  );
+};
+
+// app/components/hero-section.tsx
+<h1 className="text-4xl md:text-6xl lg:text-7xl xl:text-8xl font-normal mb-8 leading-[0.9] tracking-tight">
+  <a
+    href="https://app.korbinai.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Experience KorbinAI Copilot - Free trial"
+    onClick={handleCTAClick}
+  >
+    Experience the Copilot
+  </a>
+</h1>
+
+// app/components/problem-statement.tsx
+<h2 className="text-3xl md:text-4xl lg:text-5xl font-normal mb-6 tracking-tight">
+<h3 className="text-xl md:text-2xl font-medium mb-4 tracking-tight">
+
+// app/components/copilot-showcase.tsx
+<h2 className="text-3xl md:text-4xl lg:text-5xl font-normal mb-6 tracking-tight">
+<h3 className="text-xl md:text-2xl font-medium mb-4 tracking-tight">
+
+// app/components/specialized-tools.tsx
+<h2 className="text-3xl md:text-4xl font-normal mb-4">
+<h3 className="text-2xl font-medium mb-2">
+
+// app/components/comparison-table.tsx
+<h2 className="text-3xl md:text-4xl font-normal mb-4">
+
+// app/components/pricing-comparison-table.tsx
+<h2 className="text-3xl md:text-4xl font-normal mb-4 tracking-tight">
+
+// app/components/pricing.tsx
+const pricingTiers = [
+  {
+    name: "Korbin AI Free",
+    monthlyPrice: 0,
+    description: "Perfect for individuals getting started with AI-powered creation.",
+    features: [
+      "Limited access to Copilot (powered by Gemini 2.5 Pro)",
+      "100 Monthly Credits (across specialized tools)",
+      "Store up to 10 deleted conversations",
+      "Community Support",
+    ],
+    buttonText: "Start for Free",
+    href: "https://app.korbinai.com/signup",
+    isHighlighted: false,
+  },
+  {
+    name: "Korbin AI Pro",
+    monthlyPrice: 20,
+    description: "For power users and professionals needing advanced capabilities.",
+    features: [
+      "Unlimited access to Copilot (powered by Gemini 2.5 Pro)",
+      "1500 Monthly Credits (across specialized tools)",
+      "Store more deleted conversations",
+      "Copilot Personalizer",
+      "Priority email support",
+    ],
+    buttonText: "Get Pro",
+    href: "https://app.korbinai.com/signup?plan=pro",
+    isHighlighted: true,
+  },
+  {
+    name: "Korbin AI Unlimited",
+    monthlyPrice: 75,
+    description: "Ideal for small businesses and agencies requiring extensive usage.",
+    features: [
+      "Everything in Pro (Copilot)",
+      "Unlimited Monthly Credits (across specialized tools)",
+      "Store Unlimited deleted conversations",
+      "Copilot Personalizer",
+      "Early Access to new features",
+      "Custom Integrations (upon request)",
+      "Priority email support",
+    ],
+    buttonText: "Get Unlimited",
+    href: "https://app.korbinai.com/signup?plan=unlimited",
+    isHighlighted: false,
+  },
+];
+
+<h2 className="text-3xl md:text-4xl lg:text-5xl font-normal mb-6 tracking-tight">
+
+// app/components/faq.tsx
+<h2 className="text-3xl md:text-4xl font-normal mb-4">
+
+// app/components/use-cases.tsx
+<h3 className="text-2xl font-normal mb-2">
+
+// app/components/final-cta.tsx
+<h2 className="text-3xl md:text-5xl font-normal mb-6">
+  <a
+    href="https://app.korbinai.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    onClick={handleFinalCTAClick}
+  >
+    Get Started Free
+  </a>
+</h2>
+
+// app/components/pricing-faq.tsx
+<h2 className="text-3xl md:text-4xl font-normal mb-4 tracking-tight">

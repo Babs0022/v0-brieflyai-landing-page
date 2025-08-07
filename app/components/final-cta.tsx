@@ -40,7 +40,7 @@ export function FinalCTA() {
               className="bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-xl px-12 py-6"
             >
               <a
-                href="https://dash.korbinai.com"
+                href="https://app.korbinai.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleFinalCTAClick}

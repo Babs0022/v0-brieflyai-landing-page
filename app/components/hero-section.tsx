@@ -62,7 +62,7 @@ export function HeroSection({ y }: HeroSectionProps) {
               className="bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-base md:text-lg px-8 py-4 h-14 font-medium"
             >
               <a
-                href="https://dash.korbinai.com"
+                href="https://app.korbinai.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Experience KorbinAI Copilot - Free trial"

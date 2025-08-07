@@ -116,7 +116,7 @@ export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
         <div className="hidden md:flex items-center space-x-4">
           <Button asChild variant="ghost" className="text-foreground hover:bg-secondary font-medium">
             <a
-              href="https://dash.korbinai.com/login"
+              href="https://app.korbinai.com/login"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleLoginClick}
@@ -129,7 +129,7 @@ export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
             className="bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 font-medium"
           >
             <a
-              href="https://dash.korbinai.com/signup"
+              href="https://app.korbinai.com/signup"
               target="_blank"
               rel="noopener noreferrer"
               onClick={handleSignUpClick}
@@ -203,7 +203,7 @@ export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
             </a>
             <Button asChild variant="ghost" className="w-full text-foreground hover:bg-secondary font-medium">
               <a
-                href="https://dash.korbinai.com/login"
+                href="https://app.korbinai.com/login"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleLoginClick}
@@ -216,7 +216,7 @@ export function Header({ isMenuOpen, setIsMenuOpen }: HeaderProps) {
               className="w-full bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 font-medium"
             >
               <a
-                href="https://dash.korbinai.com/signup"
+                href="https://app.korbinai.com/signup"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleSignUpClick}

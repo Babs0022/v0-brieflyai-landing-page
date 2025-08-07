@@ -28,7 +28,7 @@ export function Pricing() {
         "Community Support",
       ],
       buttonText: "Start for Free",
-      href: "https://dash.korbinai.com/signup",
+      href: "https://app.korbinai.com/signup",
       isHighlighted: false,
     },
     {
@@ -43,6 +43,7 @@ export function Pricing() {
         "Priority email support",
       ],
       buttonText: "Get Pro",
+      href: "https://app.korbinai.com/signup",
       isHighlighted: true,
     },
     {
@@ -59,7 +60,7 @@ export function Pricing() {
         "Priority email support",
       ],
       buttonText: "Get Unlimited",
-      href: "https://dash.korbinai.com/signup?plan=unlimited",
+      href: "https://app.korbinai.com/signup",
       isHighlighted: false,
     },
   ]

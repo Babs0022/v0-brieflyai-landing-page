@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { FileEdit, Terminal, ImageIcon, Code } from 'lucide-react'
+import { FileEdit, Terminal, ImageIcon, Code } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 
 export function SpecializedTools() {
@@ -86,24 +86,24 @@ export function SpecializedTools() {
               whileHover={{ y: -5 }}
               className="group"
             >
-              <Card className="bg-secondary/50 backdrop-blur-sm border-border hover:border-purple-600 transition-all duration-300 h-full">
+              <Card className="glass-effect hover:border-purple-600 transition-all duration-300 h-full hover-lift">
                 <CardContent className="p-8">
                   <div
-                    className={`w-16 h-16 bg-gradient-to-r ${tool.color} rounded-2xl flex items-center justify-center mb-6`}
+                    className={`w-16 h-16 bg-gradient-to-r ${tool.color} rounded-2xl flex items-center justify-center mb-6 modern-shadow`}
                   >
                     <tool.icon className="w-8 h-8 text-white" />
                   </div>
                   <h3 className="text-2xl font-semibold mb-2">{tool.title}</h3>
                   <p className="text-purple-400 mb-4 font-medium">{tool.subtitle}</p>
-                  <p className="text-muted-foreground mb-6 leading-relaxed font-light">{tool.description}</p>
+                  <p className="text-muted-foreground mb-6 leading-relaxed font-normal">{tool.description}</p>
 
                   <div className="space-y-2">
                     <p className="text-sm font-medium text-foreground mb-3">How it enhances your workflow:</p>
-                    <p className="text-sm text-muted-foreground mb-3 font-light">{tool.enhancement}</p>
+                    <p className="text-sm text-muted-foreground mb-3 font-normal">{tool.enhancement}</p>
                     <p className="text-sm font-medium text-foreground mb-3">Complements the Copilot by:</p>
-                    <p className="text-sm text-muted-foreground mb-3 font-light">{tool.complement}</p>
+                    <p className="text-sm text-muted-foreground mb-3 font-normal">{tool.complement}</p>
                     <p className="text-sm font-medium text-foreground mb-3">Unique Benefits & Democratization:</p>
-                    <p className="text-sm text-muted-foreground font-light">{tool.benefits}</p>
+                    <p className="text-sm text-muted-foreground font-normal">{tool.benefits}</p>
                   </div>
                 </CardContent>
               </Card>

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Brain, Lightbulb, Code, Search, FileText, BarChart3 } from 'lucide-react'
+import { Brain, Lightbulb, Code, Search, FileText, BarChart3 } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 
 export function CopilotShowcase() {
@@ -46,16 +46,16 @@ export function CopilotShowcase() {
   ]
 
   return (
-    <section id="copilot" className="py-20 lg:py-32 bg-background">
+    <section id="copilot" className="py-20 lg:py-32 bg-gray-50/50">
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight">
-            Meet your new <span className="text-purple-400">strategic partner</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 tracking-tight text-gray-900">
+            Meet your new <span className="text-purple-600">strategic partner</span>
           </h2>
-          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 leading-relaxed font-light">
+          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto mb-4 leading-relaxed font-normal">
             Built on advanced AI frameworks that enable true understanding and strategic thinking
           </p>
-          <p className="text-base md:text-lg text-muted-foreground font-light">
+          <p className="text-base md:text-lg text-gray-500 font-normal">
             It's not just about what you ask—it's about what you need to succeed
           </p>
         </motion.div>
@@ -70,16 +70,18 @@ export function CopilotShowcase() {
               whileHover={{ y: -5 }}
               className="group"
             >
-              <Card className="bg-secondary/50 backdrop-blur-sm border-border hover:border-purple-600 transition-all duration-300 h-full">
+              <Card className="bg-white border-gray-200/50 hover:border-purple-300 transition-all duration-300 h-full hover-lift modern-shadow">
                 <CardContent className="p-6 lg:p-8">
-                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-700 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform modern-shadow">
                     <capability.icon className="w-6 h-6 text-white" />
                   </div>
-                  <h3 className="text-xl md:text-2xl font-semibold mb-4 tracking-tight">{capability.title}</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed font-light">{capability.description}</p>
-                  <div className="bg-background/50 rounded-lg p-4 border border-border">
-                    <p className="text-sm text-purple-400 font-medium mb-2">Example:</p>
-                    <p className="text-sm text-muted-foreground font-light leading-relaxed">{capability.example}</p>
+                  <h3 className="text-xl md:text-2xl font-semibold mb-4 tracking-tight text-gray-900">
+                    {capability.title}
+                  </h3>
+                  <p className="text-gray-600 mb-6 leading-relaxed font-normal">{capability.description}</p>
+                  <div className="bg-gray-50/80 rounded-lg p-4 border border-gray-100">
+                    <p className="text-sm text-purple-600 font-medium mb-2">Example:</p>
+                    <p className="text-sm text-gray-600 font-normal leading-relaxed">{capability.example}</p>
                   </div>
                 </CardContent>
               </Card>

@@ -66,12 +66,12 @@ export function FAQ() {
     <section id="faq" className="py-20 bg-background" itemScope itemType="https://schema.org/FAQPage">
       <div className="container mx-auto px-4">
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-          <p className="text-xl text-muted-foreground font-light">Everything you need to know about KorbinAI</p>
+          <h2 className="text-2xl md:text-3xl font-bold mb-4">Frequently Asked Questions</h2>
+          <p className="text-lg text-muted-foreground font-light">Everything you need to know about KorbinAI</p>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="max-w-3xl mx-auto">
-          <div itemProp="mainEntity" itemScope itemType="https://schema.org/ItemList"> {/* Added this wrapper */}
+          <div itemProp="mainEntity" itemScope itemType="https://schema.org/ItemList">
             <Accordion type="single" collapsible className="space-y-4">
               {faqs.map((faq, index) => (
                 <AccordionItem
@@ -82,13 +82,13 @@ export function FAQ() {
                   itemType="https://schema.org/Question"
                 >
                   <AccordionTrigger
-                    className="text-left hover:text-purple-400 transition-colors font-medium"
+                    className="text-left hover:text-purple-400 transition-colors font-medium text-base"
                     itemProp="name"
                   >
                     {faq.question}
                   </AccordionTrigger>
                   <AccordionContent
-                    className="text-muted-foreground leading-relaxed font-light"
+                    className="text-muted-foreground leading-relaxed font-light text-sm"
                     itemScope
                     itemType="https://schema.org/Answer"
                   >
@@ -97,7 +97,7 @@ export function FAQ() {
                 </AccordionItem>
               ))}
             </Accordion>
-          </div> {/* Closing div for mainEntity */}
+          </div>
         </motion.div>
       </div>
     </section>

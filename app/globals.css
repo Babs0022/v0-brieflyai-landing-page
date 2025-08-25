@@ -4,52 +4,50 @@
 
 @layer base {
   :root {
-    --background: 220 10% 3.9%; /* Dark */
-    --foreground: 180 10% 95%; /* Light */
-    --card: 220 10% 3.9%;
-    --card-foreground: 180 10% 95%;
-    --popover: 220 10% 3.9%;
-    --popover-foreground: 180 10% 95%;
-    --primary: 271 91% 65%; /* Purple */
-    --primary-foreground: 220 10% 3.9%; /* Dark text on purple */
-    --secondary: 220 10% 15%;
-    --secondary-foreground: 180 10% 70%;
-    --muted: 220 10% 15%;
-    --muted-foreground: 180 10% 70%;
-    --accent: 271 91% 65%; /* Purple */
-    --accent-foreground: 220 10% 3.9%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 180 10% 95%;
-    --border: 220 10% 25%;
-    --input: 220 10% 20%;
-    --ring: 271 91% 65%; /* Purple */
-    --radius: 0.5rem;
-    --font-inter: "Inter", sans-serif;
-    --font-instrument-serif: "Instrument Serif", serif; /* Add Instrument Serif font variable */
-    --heading-weight: 300; /* Heading weight */
+    --background: 0 0% 100%; /* Pure white */
+    --foreground: 240 10% 3.9%; /* Very dark text */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 262 83% 58%; /* Modern purple */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%; /* Light gray */
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%; /* Light border */
+    --input: 240 5.9% 90%;
+    --ring: 262 83% 58%;
+    --radius: 0.75rem;
+    --font-instrument-sans: "Instrument Sans", sans-serif;
   }
 
-  /* Light mode variables */
-  :root[data-theme="light"] {
-    --background: 0 0% 100%; /* White */
-    --foreground: 222.2 84% 4.9%; /* Dark text */
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-    --primary: 271 91% 65%; /* Purple */
-    --primary-foreground: 0 0% 100%; /* White text on purple */
-    --secondary: 210 40% 96.1%; /* Light gray */
-    --secondary-foreground: 222.2 47.4% 11.2%; /* Darker gray */
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 271 91% 65%; /* Purple */
-    --accent-foreground: 222.2 84% 4.9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 100%;
-    --border: 214.3 31.8% 91.4%;
-    --input: 0 0% 100%;
-    --ring: 271 91% 65%; /* Purple */
+  /* Dark mode variables (keeping as fallback) */
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 262 83% 58%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 262 83% 58%;
   }
 }
 
@@ -60,52 +58,53 @@
 
   body {
     @apply bg-background text-foreground font-sans;
-    /* Optimize text rendering */
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
     font-variant-ligatures: contextual;
     line-height: 1.6;
+    font-family: var(--font-instrument-sans);
+    font-weight: 400;
   }
 
-  /* Typography improvements */
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
-    font-family: var(--font-instrument-serif); /* Update heading font-family */
-    font-weight: var(--heading-weight) !important; /* Use variable for font-weight */
-    line-height: 1.2;
-    letter-spacing: -0.005em;
+    font-family: var(--font-instrument-sans);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    color: hsl(var(--foreground));
   }
 
   h1 {
-    font-size: clamp(2.5rem, 5vw, 4.5rem); /* max ~72px; close to your “70.5” */
-    font-weight: var(--heading-weight) !important; /* Use variable for font-weight */
-    letter-spacing: -0.01em;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 700;
+    letter-spacing: -0.04em;
   }
 
   h2 {
-    font-size: clamp(2rem, 4vw, 3.5rem);
-    font-weight: var(--heading-weight) !important; /* Use variable for font-weight */
-    letter-spacing: -0.008em;
+    font-size: clamp(2.25rem, 4.5vw, 3.75rem);
+    font-weight: 650;
+    letter-spacing: -0.03em;
   }
 
   h3 {
-    font-size: clamp(1.5rem, 3vw, 2.25rem);
-    font-weight: var(--heading-weight) !important; /* Use variable for font-weight */
-    letter-spacing: -0.005em;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+    font-weight: 600;
+    letter-spacing: -0.025em;
   }
 
   p {
     line-height: 1.7;
     font-weight: 400;
+    color: hsl(var(--muted-foreground));
   }
 
-  /* Improve focus visibility for accessibility */
   *:focus-visible {
     outline: 2px solid hsl(var(--ring));
     outline-offset: 2px;
@@ -114,21 +113,16 @@
 
 html {
   scroll-behavior: smooth;
-  /* Prevent layout shift */
   scroll-padding-top: 80px;
 }
 
-/* Optimize images for Core Web Vitals */
 img {
   max-width: 100%;
   height: auto;
-  /* Prevent layout shift */
-  aspect-ratio: attr(width) / attr(height);
 }
 
-/* Custom scrollbar with better performance */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 
 ::-webkit-scrollbar-track {
@@ -136,17 +130,15 @@ img {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #a855f7;
-  border-radius: 4px;
-  /* Add smooth transitions */
+  background: hsl(var(--primary));
+  border-radius: 3px;
   transition: background-color 0.2s ease;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #9333ea;
+  background: hsl(var(--primary) / 0.8);
 }
 
-/* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -158,20 +150,46 @@ img {
   }
 }
 
-/* Performance optimizations */
-.will-change-transform {
-  will-change: transform;
+/* Modern design utilities */
+.glass-effect {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
 }
 
-.will-change-opacity {
-  will-change: opacity;
+.gradient-text {
+  background: linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-/* Contain layout shifts */
-.contain-layout {
-  contain: layout;
+.modern-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
-.contain-paint {
-  contain: paint;
+.modern-shadow-lg {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+.premium-gradient {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.light-gradient-bg {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.subtle-gradient {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
 }

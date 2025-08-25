@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { trackEvent, trackConversion } from "@/components/analytics"
 
@@ -24,14 +24,14 @@ export function FinalCTA() {
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4 text-center">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} className="max-w-4xl mx-auto">
-          <div className="bg-gradient-to-br from-secondary to-background rounded-3xl border border-border p-12 shadow-2xl">
-            <h2 className="text-3xl md:text-5xl font-medium mb-6">
+          <div className="bg-gradient-to-br from-secondary to-background rounded-2xl border border-border p-8 shadow-lg">
+            <h2 className="text-2xl md:text-3xl font-medium mb-4">
               Join 50+ creators building faster with{" "}
               <span className="bg-gradient-to-r from-purple-400 to-purple-600 bg-clip-text text-transparent">
                 KorbinAI
               </span>
             </h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
               Start your free trial today and experience the future of component generation and content creation.
             </p>
             <Button
